@@ -1,0 +1,13 @@
+---
+# Solo este archivo necesita front matter para que Jekyll lo procese
+---
+
+// Paleta personalizada
+$brand-color: #0097f5;        // Azul tipo ArtStation
+$accent-color: #7fd4ff;       // Azul hielo
+$background-color: #05060a;   // Negro azulado profundo
+$text-color: #f5f5f5;         // Blanco suave
+$muted-text-color: #b0b8c5;
+
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";

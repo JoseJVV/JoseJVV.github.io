@@ -1,0 +1,47 @@
+title: "Portfolio de JoseJVV"
+name: "JoseJVV"
+description: "Ilustración, Concept Art y Modelado 3D"
+url: "https://JoseJVV.github.io"
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes"
+
+minimal_mistakes_skin: "dark"
+
+locale: "es-ES"
+timezone: "Europe/Madrid"
+
+plugins:
+  - jekyll-include-cache
+
+author:
+  name: "Jose J. Velarde"
+  avatar: "/assets/images/avatar.png"
+  bio: "Ilustrador, Concept Artist y 3D Modeler especializado en fantasía oscura."
+  location: "Madrid, España"
+  links:
+    - label: "ArtStation"
+      icon: "fab fa-artstation"
+      url: "https://www.artstation.com/"
+    - label: "Instagram"
+      icon: "fab fa-instagram"
+      url: "https://www.instagram.com/"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:tuemail@ejemplo.com"
+
+paginate: 5
+paginate_path: "/page:num/"
+
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Defaults para que todas las páginas usen el layout 'single'
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      classes: wide
