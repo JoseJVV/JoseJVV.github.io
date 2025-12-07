@@ -5,32 +5,36 @@
 // Paleta personalizada
 $brand-color: #0097f5;        // Azul tipo ArtStation
 $accent-color: #7fd4ff;       // Azul hielo
-$background-color: #171a24;   // Negro azulado profundo
+$background-color: #10121c;   // Negro azulado profundo
 $text-color: #f5f5f5;         // Blanco suave
 $muted-text-color: #b0b8c5;
 
 /* Evitar que puedan usar clic derecho en el logo */
 .logo-hero {
-  pointer-events: none !important;
-  user-select: none !important;
-  -webkit-user-drag: none !important;
+  display: block;
+  margin: 40px auto 20px auto;
+  max-width: 754px;
+  width: 100%;
+  height: auto;
+
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* Forzar fondo global */
+/* Fondo global de la página */
 body {
-  background-color: #10121c !important;
-
-  .masthead {
-  background-color: #10121c !important;
-  box-shadow: none !important;
+  background-color: #10121c;
 }
 
-/* También el menú de navegación interno */
+/* Hacer que el header tenga el mismo color que el fondo */
+.masthead,
 .masthead__inner-wrap {
-  background-color: #10121c !important;
-  box-shadow: none !important;
-}
+  background-color: #10121c;
+  box-shadow: none;
+  border-bottom: none;
 }
 
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
+//10121c
