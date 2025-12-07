@@ -10,12 +10,15 @@ excerpt: "Ilustración, Concept Art y Modelado 3D con estética de fantasía osc
 <img src= "/assets/images/LogoTituloWeb.png "
     alt="Logo Jose Velarde" 
     class="logo-hero"
-    style="width:754px; height:auto; pointer-events:none; user-select:none;">
+    style="width:754px; height:auto; pointer-events:none; user-select:none;"
+    oncontextmenu="return false;" >
 
 <p class="hero__subtitle">
 Ilustración · Concept Art · Modelado 3D para animación, videojuegos e impresión.
 </p>
 </div>
+
+
 
 ## Sobre mí
 
