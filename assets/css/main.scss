@@ -19,9 +19,8 @@ $muted-text-color: #b0b8c5;
 /* Forzar fondo global */
 body {
   background-color: #10121c !important;
-}
-/* Hacer que el header tenga el mismo color del fondo */
-.masthead {
+
+  .masthead {
   background-color: #10121c !important;
   box-shadow: none !important;
 }
@@ -31,5 +30,7 @@ body {
   background-color: #10121c !important;
   box-shadow: none !important;
 }
+}
+
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
