@@ -7,7 +7,11 @@ excerpt: "Ilustración, Concept Art y Modelado 3D con estética de fantasía osc
 ---
 
 <div class="hero hero--dark-fantasy">
-<h1>José Jesús Velarde Vásquez: Ilustrador y Artista 3D</h1>
+<img src= "/assets/images/LogoTituloWeb.png "
+    alt="Logo Jose Velarde" 
+    class="logo-hero"
+    style="width:754px; height:auto; pointer-events:none; user-select:none;">
+
 <p class="hero__subtitle">
 Ilustración · Concept Art · Modelado 3D para animación, videojuegos e impresión.
 </p>
