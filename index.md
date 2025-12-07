@@ -7,7 +7,7 @@ excerpt: "Ilustración, Concept Art y Modelado 3D con estética de fantasía osc
 ---
 
 <div class="hero hero--dark-fantasy">
-<h1>Portfolio de Jose Jesús Velarde</h1>
+<h1>José Jesús Velarde Vásquez: Ilustrador y Artista 3D</h1>
 <p class="hero__subtitle">
 Ilustración · Concept Art · Modelado 3D para animación, videojuegos e impresión.
 </p>
