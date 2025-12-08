@@ -8,6 +8,9 @@ $accent-color: #7fd4ff;       // Azul hielo
 $background-color: #10121c;   // Negro azulado profundo
 $text-color: #f5f5f5;         // Blanco suave
 $muted-text-color: #b0b8c5;
+
+///////////////////////////////////////////////////////////////////////
+
 /* Contenedor del logo en la cabecera */
 .hero-logo {
   text-align: center;
@@ -22,6 +25,7 @@ $muted-text-color: #b0b8c5;
   user-select: none;
   -webkit-user-drag: none;
 }
+////////////////////////////////////////////////////////////////////
 /* Ajuste para pantallas pequeñas (móvil / tablet) */
 @media (max-width: 768px) {
   .hero-logo {
@@ -32,6 +36,7 @@ $muted-text-color: #b0b8c5;
     max-width: 90%;   /* ocupa como mucho el 90% del ancho de la pantalla */
   }
 }
+//////////////////////////////////////////////////////////////////
 /* .logo-hero {
   display: block;
   margin: 40px auto 20px auto;
@@ -66,13 +71,11 @@ body {
 }
 
 /* 🔽 Reducir un 50% el tamaño del texto desde 'Sobre mí' en adelante */
-#page .page__content p,
-#page .page__content li,
-#page .page__content h2,
-#page .page__content h3,
-#page .page__content h4 {
-  font-size: 0.5rem !important;   /* 50% del tamaño original */
-  line-height: 1.4;
+/* Afecta a párrafos y listas dentro del contenido de la página */
+.page__content p,
+.page__content li {
+  font-size: 0.5rem;      /* aprox. 50% del tamaño base */
+  line-height: 1.6;
 }
 
 @import "minimal-mistakes/skins/dark";
