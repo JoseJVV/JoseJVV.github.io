@@ -65,7 +65,32 @@ body {
   border-bottom: none;
 }
 
+///////////////////////////////////////////////////////////////////////
+// ===== CAMBIO DE TAMAÑO DE TEXTO SOLO EN LA PÁGINA INICIO =========
 
+// 🔥 Cambia este tamaño cuando quieras
+// Ejemplos:
+// 1rem  → tamaño normal
+// 0.9rem → un poco más pequeño
+// 0.8rem → más pequeño
+// 1.1rem → más grande
+
+.inicio .page__content {
+  font-size: 0.75rem;    // ← CAMBIA ESTE VALOR PARA AJUSTAR EL TEXTO DE INICIO
+  line-height: 1.6;
+}
+
+.inicio .page__content p,
+.inicio .page__content li {
+  font-size: inherit;    // usa el valor anterior
+  line-height: inherit;
+}
+
+.inicio .page__content h2,
+.inicio .page__content h3,
+.inicio .page__content h4 {
+  font-size: calc(1.2 * 0.9rem);   // títulos un poco más grandes
+}
 
 ///////////////////////////////////////////////////////////////////////
 // ========= SOLO PÁGINA DE INICIO (.inicio) =========================
