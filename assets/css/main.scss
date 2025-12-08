@@ -59,7 +59,7 @@ $muted-text-color: #b0b8c5;
 
 /* Imagen del CV: bloqueada y responsive */
 .cv-image {
-  
+
   display: block;
 
   /* Mantiene la imagen con su tamaño original grande */
@@ -67,7 +67,7 @@ $muted-text-color: #b0b8c5;
   max-width: none;
 
   /* Aumenta el tamaño SIN que se centre ni se achique */
-  transform: scale(1.35);      /* ← AJUSTA AQUÍ EL TAMAÑO */
+  transform: scale(1.1);      /* ← AJUSTA AQUÍ EL TAMAÑO */
   transform-origin: top left;  /* ← La expande desde la esquina izquierda */
 
   height: auto;
