@@ -52,9 +52,10 @@ $muted-text-color: #b0b8c5;
 /* Contenedor de la imagen de CV */
 .cv-wrapper {
   width: 100%;
-  overflow: visible;        /* deja que crezca sin recorte */
-  margin: 2rem 0;
-  text-align: left;         /* alinea todo a la izquierda */
+  overflow: visible;
+  margin: 0;                /* ← elimina margen superior/inferior extra */
+  padding-bottom: 0;        /* ← asegura que no deje hueco adicional */
+  text-align: left;
 }
 
 /* Imagen del CV: bloqueada y responsive */
@@ -71,6 +72,9 @@ $muted-text-color: #b0b8c5;
   transform-origin: top left;  /* ← La expande desde la esquina izquierda */
 
   height: auto;
+
+  /* ← esta línea es CLAVE: elimina el espacio fantasma */
+  margin-bottom: -12%;  
 
   pointer-events: none;     /* no se puede pinchar/arrastrar */
   user-select: none;        /* no seleccionable */
