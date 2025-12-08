@@ -60,7 +60,7 @@ body {
 /* 🔽 Subtítulo: centrar, tamaño un poco más pequeño y margen superior */
 .hero__subtitle {
   text-align: center;   /* centrado (por si acaso) */
-  font-size: 0.9rem;    /* ~2px más pequeño que el texto base */
+  font-size: 0.8rem;    /* ~2px más pequeño que el texto base */
   margin-top: 6px;      /* le das un poco más de espacio respecto al logo */
   opacity: 0.95;        /* opcional, suaviza ligeramente el texto */
 }
@@ -68,7 +68,7 @@ body {
 /* 🔽 Reducir un poco el tamaño del texto del contenido de Inicio */
 .page__content p,
 .page__content li {
-  font-size: 0.95rem;   /* un pelín más pequeño */
+  font-size: 0.70rem;   /* un pelín más pequeño */
   line-height: 1.6;     /* buena legibilidad */
 }
 
