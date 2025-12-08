@@ -18,7 +18,7 @@ $muted-text-color: #b0b8c5;
 .page,
 .page__inner,
 .page__content {
-  max-width: 1400px;   /* prueba este valor; puedes subir a  1400 1500 o 1600 si quieres más */
+  max-width: 1600px;   /* prueba este valor; puedes subir a  1400 1500 o 1600 si quieres más */
 }
 
 //////////////////////////// LOGO TITULO ///////////////////////////////////////////
@@ -84,7 +84,7 @@ $muted-text-color: #b0b8c5;
   height: auto;
   margin: 0 auto;
 
-  margin-left: 4px;   /* mueve la imagen 4px a la derecha */
+  margin-right: 2px;   /* mueve la imagen 4px a la derecha */
 
   pointer-events: none;     /* bloquea clic/arrastre */
   user-select: none;
@@ -138,7 +138,7 @@ body {
 // 1.1rem → más grande
 
 .inicio .page__content {
-  font-size: 0.8rem;    // ← CAMBIA ESTE VALOR PARA AJUSTAR EL TEXTO DE INICIO
+  font-size: 0.85rem;    // ← CAMBIA ESTE VALOR PARA AJUSTAR EL TEXTO DE INICIO
   line-height: 1.6;
 }
 
