@@ -12,8 +12,10 @@ excerpt: "Ilustración, Concept Art y Modelado 3D con estética de fantasía osc
     class="logo-hero"
     oncontextmenu="return false;" >
 
+
+
 <p class="hero__subtitle">
-Ilustración · Concept Art · Modelado 3D para animación, videojuegos e impresión.
+Illustration · Concept Art · 3D Artist Junior.
 </p>
 </div>
 
