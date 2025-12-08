@@ -62,40 +62,43 @@ body {
   border-bottom: none;
 }
 
-/* 🔽 Subtítulo: centrar, tamaño un poco más pequeño y margen superior */
-.hero__subtitle {
-  text-align: center;   /* centrado (por si acaso) */
+
+
+////////////////////////////////////////////////////////////////////////////
+/* ============================================
+   🔥 FORZAR alineación a la izquierda SOLO Inicio
+   ============================================ */
+
+/* Forzamos TODOS los contenedores de contenido */
+.inicio article.page,
+.inicio .page__inner-wrap,
+.inicio .page__content,
+.inicio .page__content * {
+    text-align: left !important;
+}
+
+/* Mantenemos el subtítulo centrado */
+.inicio .hero__subtitle {
+    text-align: center !important; /* centrado (por si acaso) */
   font-size: 0.8rem;    /* ~2px más pequeño que el texto base */
   margin-top: 6px;      /* le das un poco más de espacio respecto al logo */
   opacity: 0.95;        /* opcional, suaviza ligeramente el texto */
 }
 
-////////////////////////////////////////////////////////////////////////////
-/* 🔽 Reducir tamaño del texto SOLO en la página de Inicio */
-.inicio .page__content {
-  font-size: 0.7rem !important;
-  line-height: 1.5 !important;
-}
-
-.inicio .page__content p,
-.inicio .page__content li {
-  font-size: 0.7rem !important;
-  line-height: 1.6 !important;
-}
-
-.inicio .page__content h2,
-.inicio .page__content h3,
-.inicio .page__content h4 {
-  font-size: 0.8rem !important;
-}
-/* 🔽 Alinear a la izquierda todo el contenido de Inicio (menos el subtítulo) */
+/* ============================================
+   🔥 Mantener reducción de tamaño SOLO en Inicio
+   ============================================ */
 .inicio .page__content,
 .inicio .page__content p,
-.inicio .page__content li,
+.inicio .page__content li {
+    font-size: 0.5rem !important;
+    line-height: 1.5 !important;
+}
+
 .inicio .page__content h2,
 .inicio .page__content h3,
 .inicio .page__content h4 {
-  text-align: left !important;
+    font-size: 0.75rem !important;
 }
 
 @import "minimal-mistakes/skins/dark";
