@@ -84,7 +84,8 @@ $muted-text-color: #b0b8c5;
   height: auto;
   margin: 0 auto;
 
-  margin-right: 5%;   /* mueve la imagen 4px a la derecha */
+   /* DESPLAZAMIENTO FINO */
+  transform: translateX(4px);
 
   pointer-events: none;     /* bloquea clic/arrastre */
   user-select: none;
