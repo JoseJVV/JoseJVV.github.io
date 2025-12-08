@@ -17,12 +17,9 @@ Illustration · Concept Art · 3D Artist Junior.
 </p>
 </div>
 
-<div class="cv-wrapper">
-  <img src="/assets/images/CVResumen.png"
-       alt="Resumen CV de José Velarde"
-       class="cv-image"
-       oncontextmenu="return false;">
-</div>
+
+
+
 
 
 
@@ -39,7 +36,12 @@ My goal is to transform each concept into something that inspires, excites, and 
 
 ### Resumen CV
 
-
+<div class="cv-wrapper">
+  <img src="/assets/images/CVResumen.png"
+       alt="Resumen CV de José Velarde"
+       class="cv-image"
+       oncontextmenu="return false;">
+</div>
 
 ### Proyectos profesionales destacados
 
