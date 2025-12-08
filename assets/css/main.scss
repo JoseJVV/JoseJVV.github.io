@@ -71,32 +71,22 @@ body {
 }
 
 ////////////////////////////////////////////////////////////////////////////
-/* 🔽 AGRESIVO: reducir un 50% el texto desde 'Sobre mí' hacia abajo */
-/* Atacamos directamente al contenedor principal de contenido */
-.layout--single .page__content,
-.page__content {
-  font-size: 0.7rem !important;    /* 50% del tamaño base */
+/* 🔽 Reducir tamaño del texto SOLO en la página de Inicio */
+.inicio .page__content {
+  font-size: 0.7rem !important;
   line-height: 1.5 !important;
 }
 
-/* Párrafos y listas dentro de la página */
-.layout--single .page__content p,
-.layout--single .page__content li,
-.page__content p,
-.page__content li {
-  font-size: 0.8rem !important;
+.inicio .page__content p,
+.inicio .page__content li {
+  font-size: 0.7rem !important;
   line-height: 1.6 !important;
 }
 
-/* Títulos dentro del contenido, también más pequeños */
-.layout--single .page__content h2,
-.layout--single .page__content h3,
-.layout--single .page__content h4,
-.page__content h2,
-.page__content h3,
-.page__content h4 {
-  font-size: 0.75rem !important;
-  line-height: 1.4 !important;
+.inicio .page__content h2,
+.inicio .page__content h3,
+.inicio .page__content h4 {
+  font-size: 0.8rem !important;
 }
 
 @import "minimal-mistakes/skins/dark";

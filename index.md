@@ -1,7 +1,7 @@
 ---
 title: " "
 layout: single
-classes: wide
+classes: wide, inicio
 permalink: /
 excerpt: "Ilustración, Concept Art y Modelado 3D con estética de fantasía oscura."
 ---
