@@ -8,9 +8,31 @@ $accent-color: #7fd4ff;       // Azul hielo
 $background-color: #10121c;   // Negro azulado profundo
 $text-color: #f5f5f5;         // Blanco suave
 $muted-text-color: #b0b8c5;
-
+/* Contenedor del logo en la cabecera */
+.hero-logo {
+  text-align: center;
+  margin-top: 40px;
+}
 /* Evitar que puedan usar clic derecho en el logo */
 .logo-hero {
+  max-width: 754px;   /* tu tamaño "original" */
+  width: 100%;        /* se adapta al contenedor */
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+/* Ajuste para pantallas pequeñas (móvil / tablet) */
+@media (max-width: 768px) {
+  .hero-logo {
+    margin-top: 20px;
+  }
+
+  .logo-hero {
+    max-width: 90%;   /* ocupa como mucho el 90% del ancho de la pantalla */
+  }
+}
+/* .logo-hero {
   display: block;
   margin: 40px auto 20px auto;
   max-width: 754px;
