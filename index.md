@@ -19,9 +19,7 @@ Illustration · Concept Art · 3D Artist Junior.
 
 
 
-
-
-
+<div class = "texto-inicio">
 
 ## About me
 I'm a **Junior 3D Artist**, **Generalist**, and **Illustrator**, and I'm passionate about bringing worlds to life. My specialty is **Anime-style Character Concept Art**, creating visual identities that work in both **comics** and **video games**.
@@ -32,6 +30,7 @@ I'm a **Junior 3D Artist**, **Generalist**, and **Illustrator**, and I'm passion
 
 My goal is to transform each concept into something that inspires, excites, and connects, turning imagination into real visual experiences.
 
+</div>
 
 
 ### Resumen CV
