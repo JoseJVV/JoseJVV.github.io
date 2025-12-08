@@ -57,7 +57,7 @@ $muted-text-color: #b0b8c5;
 
 /* Imagen del CV: bloqueada y responsive */
 .cv-image {
-  max-width: 1200px;        /* límite en escritorio */
+  max-width: 1600px;        /* límite en escritorio */
   width: 100%;              /* se adapta al contenedor */
   height: auto;
   pointer-events: none;     /* no se puede pinchar/arrastrar */
@@ -68,7 +68,7 @@ $muted-text-color: #b0b8c5;
 /* Ajuste para pantallas pequeñas (móvil/tablet) */
 @media (max-width: 768px) {
   .cv-wrapper {
-    margin: 1.5rem 0 2rem 0;
+    margin: 1rem 0 1.5rem 0;
   }
 
   .cv-image {
