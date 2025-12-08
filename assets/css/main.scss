@@ -80,7 +80,7 @@ body {
 /* Mantenemos el subtítulo centrado */
 .inicio .hero__subtitle {
     text-align: center !important; /* centrado (por si acaso) */
-  font-size: 0.8rem;    /* ~2px más pequeño que el texto base */
+  font-size: 0.95rem;    /* ~2px más pequeño que el texto base */
   margin-top: 6px;      /* le das un poco más de espacio respecto al logo */
   opacity: 0.95;        /* opcional, suaviza ligeramente el texto */
 }
@@ -91,14 +91,14 @@ body {
 .inicio .page__content,
 .inicio .page__content p,
 .inicio .page__content li {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
     line-height: 1.5 !important;
 }
 
 .inicio .page__content h2,
 .inicio .page__content h3,
 .inicio .page__content h4 {
-    font-size: 0.8rem !important;
+    font-size: 0.95rem !important;
 }
 
 @import "minimal-mistakes/skins/dark";
