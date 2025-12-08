@@ -9,6 +9,9 @@ $background-color: #10121c;   // Negro azulado profundo
 $text-color: #f5f5f5;         // Blanco suave
 $muted-text-color: #b0b8c5;
 
+@import "minimal-mistakes/skins/dark";
+@import "minimal-mistakes";
+
 ///////////////////////////////////////////////////////////////////////
 
 /* Contenedor del logo en la cabecera */
@@ -64,63 +67,47 @@ body {
 
 
 
-////////////////////////////////////////////////////////////////////////////
-/* ============================================
-   🔥 FORZAR alineación a la izquierda SOLO Inicio
-   ============================================ */
+///////////////////////////////////////////////////////////////////////
+// ======= SOLO PÁGINA INICIO (.inicio) ==============================
 
-/* Forzamos TODOS los contenedores de contenido */
-.inicio article.page,
-.inicio .page__inner-wrap,
-.inicio .page__content,
-.inicio .page__content * {
-    text-align: left !important;
+// Limitar el ancho del contenido de Inicio
+// Ajusta este valor (ej. 800px, 900px) hasta que coincida con tu línea roja
+.inicio .page__inner-wrap {
+  max-width: 900px;        // PRUÉBALO y ajusta según lo que veas
+  margin-left: 0;          // pegado al lado izquierdo del contenedor de contenido
+  margin-right: auto;      // deja margen a la derecha
 }
 
-/* Mantenemos el subtítulo centrado */
-.inicio .hero__subtitle {
-    text-align: center !important; /* centrado (por si acaso) */
-  font-size: 0.95rem;    /* ~2px más pequeño que el texto base */
-  margin-top: 6px;      /* le das un poco más de espacio respecto al logo */
-  opacity: 0.95;        /* opcional, suaviza ligeramente el texto */
+// Texto de Inicio: alineado a la izquierda
+.inicio .page__content {
+  text-align: left !important;
+  font-size: 0.95rem;      // ligeramente más pequeño que el base
+  line-height: 1.6;
 }
 
-/* ============================================
-   🔥 Mantener reducción de tamaño SOLO en Inicio
-   ============================================ */
-.inicio .page__content,
+// Párrafos y listas dentro del contenido de Inicio
 .inicio .page__content p,
 .inicio .page__content li {
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
+  text-align: left !important;
 }
 
+// Títulos dentro de Inicio
 .inicio .page__content h2,
 .inicio .page__content h3,
 .inicio .page__content h4 {
-    font-size: 0.95rem !important;
+  text-align: left !important;
 }
 
-/* ============================================
-   🔥 Limitar el ancho SOLO del texto en Inicio
-   ============================================ */
-
-/* Este es el contenedor REAL del contenido en Minimal Mistakes */
-.inicio .page__inner-wrap {
-    max-width: 2050px !important;  /* AJUSTA este valor para coincidir EXACTAMENTE con tu línea roja */
-    margin-left: 0 !important;    /* evita centrado */
-    margin-right: auto !important;
-}
-
-/* Asegurar que todo el texto está alineado a la izquierda */
-.inicio .page__content,
-.inicio .page__content * {
-    text-align: left !important;
+// Subtítulo bajo el logo: SIEMPRE centrado
+.inicio .hero__subtitle {
+  text-align: center !important;
+  font-size: 0.95rem;
+  margin-top: 6px;
+  opacity: 0.95;
 }
 
 
 
 
-@import "minimal-mistakes/skins/dark";
-@import "minimal-mistakes";
+
 //10121c
