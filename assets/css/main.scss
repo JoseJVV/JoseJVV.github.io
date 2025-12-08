@@ -68,44 +68,33 @@ body {
 
 
 ///////////////////////////////////////////////////////////////////////
-// ======= SOLO PÁGINA INICIO (.inicio) ==============================
+// ========= SOLO PÁGINA DE INICIO (.inicio) =========================
 
-// Limitar el ancho del contenido de Inicio
-// Ajusta este valor (ej. 800px, 900px) hasta que coincida con tu línea roja
+// 1) Limitar el ancho del contenido de texto (como tu cuadro rojo)
+//    Ajusta este valor si quieres más o menos ancho
 .inicio .page__inner-wrap {
-  max-width: 900px;        // PRUÉBALO y ajusta según lo que veas
-  margin-left: 0;          // pegado al lado izquierdo del contenedor de contenido
-  margin-right: auto;      // deja margen a la derecha
+  max-width: 900px;     // prueba este valor; si lo quieres más estrecho, baja a 850 o 800
+  margin-left: auto;    // centra el bloque respecto a la página
+  margin-right: auto;
 }
 
-// Texto de Inicio: alineado a la izquierda
+// 2) Todo el texto de Inicio alineado a la izquierda
 .inicio .page__content {
-  text-align: left !important;
-  font-size: 0.95rem;      // ligeramente más pequeño que el base
-  line-height: 1.6;
+  text-align: left;
 }
 
-// Párrafos y listas dentro del contenido de Inicio
 .inicio .page__content p,
-.inicio .page__content li {
-  text-align: left !important;
-}
-
-// Títulos dentro de Inicio
+.inicio .page__content li,
 .inicio .page__content h2,
 .inicio .page__content h3,
 .inicio .page__content h4 {
-  text-align: left !important;
+  text-align: left;
 }
 
-// Subtítulo bajo el logo: SIEMPRE centrado
+// 3) El subtítulo SIEMPRE centrado
 .inicio .hero__subtitle {
-  text-align: center !important;
-  font-size: 0.95rem;
-  margin-top: 6px;
-  opacity: 0.95;
+  text-align: center;
 }
-
 
 
 
