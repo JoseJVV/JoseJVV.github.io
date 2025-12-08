@@ -80,12 +80,12 @@ $muted-text-color: #b0b8c5;
 .cv-image {
   display: block;
   width: 100%;
-  max-width: 910px; /* << AJUSTA AQUÍ EL TAMAÑO FINAL */
+  max-width: 930px; /* << AJUSTA AQUÍ EL TAMAÑO FINAL */
   height: auto;
   margin: 0 auto;
 
    /* DESPLAZAMIENTO FINO */
-  transform: translateX(40px);
+  transform: translateX(55px);
 
   pointer-events: none;     /* bloquea clic/arrastre */
   user-select: none;
