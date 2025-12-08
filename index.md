@@ -39,12 +39,7 @@ My goal is to transform each concept into something that inspires, excites, and 
 
 ### Resumen CV
 
-- **Especialidades:** Ilustración, Concept Art, Diseño de personajes, Modelado 3D (personajes y entornos)
-- **Sectores:** Cómic, videojuegos, animación, impresión 3D
-- **Herramientas:** Photoshop, Clip Studio Paint, Blender, ZBrush, Substance Painter
-- **Ubicación:** Madrid, España
 
-> Aquí puedes añadir tu experiencia profesional real (estudios, estudios de arte, empresas, proyectos…).
 
 ### Proyectos profesionales destacados
 
