@@ -47,7 +47,35 @@ $muted-text-color: #b0b8c5;
     max-width: 90%;   /* ocupa como mucho el 90% del ancho de la pantalla */
   }
 }
-//////////////////////////////////////////////////////////////////
+
+/////////////////////////CV RESUMIDO/////////////////////////////////////////
+/* Contenedor de la imagen de CV */
+.cv-wrapper {
+  text-align: center;
+  margin: 2rem 0 3rem 0;
+}
+
+/* Imagen del CV: bloqueada y responsive */
+.cv-image {
+  max-width: 1200px;        /* límite en escritorio */
+  width: 100%;              /* se adapta al contenedor */
+  height: auto;
+  pointer-events: none;     /* no se puede pinchar/arrastrar */
+  user-select: none;        /* no seleccionable */
+  -webkit-user-drag: none;  /* bloquea arrastre en navegadores webkit */
+}
+
+/* Ajuste para pantallas pequeñas (móvil/tablet) */
+@media (max-width: 768px) {
+  .cv-wrapper {
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .cv-image {
+    max-width: 100%;        /* ocupa todo el ancho disponible */
+  }
+}
+////////////////////////////////////////////////////////////////////////
 /* .logo-hero {
   display: block;
   margin: 40px auto 20px auto;

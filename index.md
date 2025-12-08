@@ -12,11 +12,16 @@ excerpt: "Ilustración, Concept Art y Modelado 3D con estética de fantasía osc
     class="logo-hero"
     oncontextmenu="return false;" >
 
-
-
 <p class="hero__subtitle">
 Illustration · Concept Art · 3D Artist Junior.
 </p>
+</div>
+
+<div class="cv-wrapper">
+  <img src="/assets/images/CVResumen.png"
+       alt="Resumen CV de José Velarde"
+       class="cv-image"
+       oncontextmenu="return false;">
 </div>
 
 
