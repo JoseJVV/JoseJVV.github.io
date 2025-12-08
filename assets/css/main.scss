@@ -57,6 +57,20 @@ body {
   border-bottom: none;
 }
 
+/* Estilo personalizado para la línea "Illustration · Concept Art · 3D Artist Junior." */
+.page__lead {
+    text-align: center;        /* Centrar texto */
+    font-size: 0.9em;          /* Tamaño 2px más pequeño aprox. */
+    margin-top: 1px;           /* 1px más de margen arriba */
+    opacity: 0.95;             /* Opcional: suaviza ligeramente el texto */
+}
+
+/* Reducir un poco el tamaño del texto de toda la sección Inicio */
+.page__content p {
+    font-size: 0.95em;         /* Baja ligeramente el tamaño general */
+    line-height: 1.55;         /* Aumenta legibilidad */
+}
+
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 //10121c
