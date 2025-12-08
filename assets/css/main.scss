@@ -101,21 +101,26 @@ body {
     font-size: 0.95rem !important;
 }
 
-/* ============================================
-   🔥 Limitar ancho del texto SOLO en Inicio
-   ============================================ */
+/* ======================================================
+   🔥 Limitar el ancho solo del texto de INICIO (no logo)
+   ====================================================== */
 
-/* Contenido textual de la página de Inicio */
-.inicio .page__content {
-  max-width: 650px !important;   /* ajusta este valor hasta que coincida con tu línea roja */
-  margin-left: auto !important;
-  margin-right: 850px !important; /* centra el bloque dentro del área */
+/* Contenedor real del contenido en Minimal Mistakes */
+.inicio .page__inner-wrap {
+    max-width: 680px !important;   /* Ajusta este número hasta coincidir con tu línea roja */
+    margin-right: auto !important;
+    margin-left: 0 !important;     /* Texto alineado a la izquierda */
 }
 
-/* Asegurar que los párrafos y listas siguen la misma restricción */
-.inicio .page__content p,
-.inicio .page__content li {
-  max-width: 650px !important;
+/* Asegurar que el texto NO se centre */
+.inicio .page__content,
+.inicio .page__content * {
+    text-align: left !important;
+}
+
+/* Mantener el subtítulo centrado */
+.inicio .hero__subtitle {
+    text-align: center !important;
 }
 
 @import "minimal-mistakes/skins/dark";
