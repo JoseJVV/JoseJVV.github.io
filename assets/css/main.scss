@@ -180,7 +180,14 @@ body {
 }
 
 
+/* ===== Ancho del texto SOLO en la página de inicio ===== */
 
+.page.home-wide .page__inner,
+.page.home-wide .page__content {
+  max-width: 1150px;   /* Ajusta este valor para acercarte a la “O” de Contacto */
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
