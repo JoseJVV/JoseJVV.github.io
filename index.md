@@ -22,11 +22,16 @@ Illustration · Concept Art · 3D Artist Junior.
 
 
 ## Sobre mí
+Soy **Artista 3D Junior**, **Generalista** e **Ilustrador**, y me apasiona dar vida a mundos que aún no existen. Mi especialidad es el **Concept Art de personajes estilo anime**, creando identidades visuales que encajan tanto en **cómics** como en **videojuegos**.
 
-Soy un artista especializado en **fantasía oscura**, combinando ilustración tradicional y digital, 
-**Concept Art** para personajes y entornos, y **modelado 3D** para cinematics, videojuegos e impresión.
+- Trabajo desde la idea inicial hasta el resultado final: **Modelado 3D** de props, **environments y personajes**, **animación 3D**, y **desarrollo en Unity**.
 
-Trabajo el contraste entre luces frías y sombras profundas para crear atmósferas de poder, misterio y tensión.
+- También cuento con experiencia como **ilustrador para editoriales**, desarrollando imágenes que narran, acompañan y potencian historias.
+
+Mi propósito es transformar cada concepto en algo que inspire, emocione y conecte, convirtiendo la imaginación en experiencias visuales reales.
+
+
+
 
 ### Resumen CV
 
