@@ -166,27 +166,19 @@ body {
   margin-right: auto;
 }
 
-// 2) Todo el texto de Inicio alineado a la izquierda
-/* .inicio .page__content {
-  text-align: left;
+/* ----- HERO DE LA PORTADA ----- */
+
+/* Asegura que todo el bloque del logo y subtítulo está centrado */
+.hero.hero--dark-fantasy {
+  text-align: center;
 }
 
-.inicio .page__content p,
-.inicio .page__content li,
-.inicio .page__content h2,
-.inicio .page__content h3,
-.inicio .page__content h4 {
-  text-align: left;
-}
-
-
-/* ===== Ancho del texto SOLO en la página de inicio ===== */
-
-.page.home-wide .page__inner,
-.page.home-wide .page__content {
-  max-width: 1150px;   /* Ajusta este valor para acercarte a la “O” de Contacto */
-  margin-left: auto;
-  margin-right: auto;
+/* Solo el subtítulo bajo el logo */
+.hero.hero--dark-fantasy .hero__subtitle {
+  display: block;
+  max-width: 520px;        /* ancho del subtítulo (ajusta si quieres) */
+  margin: 1.5rem auto 0;   /* centrado horizontal y separación hacia abajo */
+  text-align: center;
 }
 
 
