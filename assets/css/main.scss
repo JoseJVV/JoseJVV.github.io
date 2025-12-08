@@ -12,6 +12,15 @@ $muted-text-color: #b0b8c5;
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 
+/* ===== ANCHO GLOBAL DEL CONTENIDO ===== */
+/* Amplía la columna central de Minimal Mistakes */
+
+.page,
+.page__inner,
+.page__content {
+  max-width: 1400px;   /* prueba este valor; puedes subir a 1500 o 1600 si quieres más */
+}
+
 //////////////////////////// LOGO TITULO ///////////////////////////////////////////
 
 /* Contenedor del logo en la cabecera */
