@@ -101,6 +101,23 @@ body {
     font-size: 0.95rem !important;
 }
 
+/* ============================================
+   🔥 Limitar ancho del texto SOLO en Inicio
+   ============================================ */
+
+/* Contenido textual de la página de Inicio */
+.inicio .page__content {
+  max-width: 650px !important;   /* ajusta este valor hasta que coincida con tu línea roja */
+  margin-left: auto !important;
+  margin-right: auto !important; /* centra el bloque dentro del área */
+}
+
+/* Asegurar que los párrafos y listas siguen la misma restricción */
+.inicio .page__content p,
+.inicio .page__content li {
+  max-width: 650px !important;
+}
+
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 //10121c
