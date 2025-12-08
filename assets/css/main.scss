@@ -49,24 +49,24 @@ $muted-text-color: #b0b8c5;
 }
 
 ///////////////////////// CV RESUMIDO /////////////////////////////////////////
-/* Contenedor de la imagen de CV */
-/* Bloque del CV bajo "Resumen CV" */
+/* === BLOQUE DEL CV BAJO "RESUMEN CV" === */
+
 .cv-wrapper {
   width: 100%;
   text-align: center;
-  margin: 2rem 0 2.5rem 0;   /* separaciones arriba y abajo */
+  margin: 2rem 0 2.5rem 0;
   padding: 0;
 }
 
-/* Imagen del CV: limpia, sin transforms raros */
+/* IMAGEN DEL CV - VERSIÓN FINAL ESTABLE */
 .cv-image {
   display: block;
-  width: 100%;               /* se adapta al ancho del contenido */
-  max-width: 1500px;         /* tamaño máximo en PC (ajusta si quieres) */
+  width: 100%;              /* ocupación fluida */
+  max-width: 1680px;        /* << AUMENTO EXACTO DEL 20% */
   height: auto;
-  margin: 0 auto;            /* centrada dentro del wrapper */
-
-  pointer-events: none;      /* bloquea clics / arrastre */
+  margin: 0 auto;           /* centrada, estable */
+  
+  pointer-events: none;     /* bloqueo clic derecho / arrastre */
   user-select: none;
   -webkit-user-drag: none;
 }
