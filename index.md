@@ -30,6 +30,14 @@ Soy **Artista 3D Junior**, **Generalista** e **Ilustrador**, y me apasiona dar v
 
 Mi propósito es transformar cada concepto en algo que inspire, emocione y conecte, convirtiendo la imaginación en experiencias visuales reales.
 
+## About me
+I'm a **Junior 3D Artist**, **Generalist**, and **Illustrator**, and I'm passionate about bringing worlds to life. My specialty is **Anime-style Character Concept Art**, creating visual identities that work in both **comics** and **video games**.
+
+- I work from the initial idea to the final result: **3D modeling** of props, **environments, and characters**, **3D animation**, and **development in Unity**.
+
+- I also have experience as an **illustrator for publishers**, developing images that narrate, complement, and enhance stories.
+
+My goal is to transform each concept into something that inspires, excites, and connects, turning imagination into real visual experiences.
 
 
 
