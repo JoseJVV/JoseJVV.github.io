@@ -28,6 +28,13 @@ $muted-text-color: #b0b8c5;
   user-select: none;
   -webkit-user-drag: none;
 }
+
+/* Asegurar que el subtítulo está centrado */
+.inicio .hero__subtitle {
+    text-align: center !important;
+    width: 100% !important;            /* se asegura que ocupa toda la línea */
+    margin: 0 auto !important;         /* centra el bloque */
+}
 ////////////////////////////////////////////////////////////////////
 /* Ajuste para pantallas pequeñas (móvil / tablet) */
 @media (max-width: 768px) {
@@ -98,7 +105,7 @@ body {
 // 1) Limitar el ancho del contenido de texto (como tu cuadro rojo)
 //    Ajusta este valor si quieres más o menos ancho
 .inicio .page__inner-wrap {
-  max-width: 900px;     // prueba este valor; si lo quieres más estrecho, baja a 850 o 800
+  max-width: 950px;     // prueba este valor; si lo quieres más estrecho, baja a 850 o 800
   margin-left: auto;    // centra el bloque respecto a la página
   margin-right: auto;
 }
@@ -116,10 +123,7 @@ body {
   text-align: left;
 }
 
-// 3) El subtítulo SIEMPRE centrado
-.inicio .hero__subtitle {
-  text-align: center;
-}
+
 
 
 
