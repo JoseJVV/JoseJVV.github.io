@@ -88,6 +88,15 @@ body {
 .inicio .page__content h4 {
   font-size: 0.8rem !important;
 }
+/* 🔽 Alinear a la izquierda todo el contenido de Inicio (menos el subtítulo) */
+.inicio .page__content,
+.inicio .page__content p,
+.inicio .page__content li,
+.inicio .page__content h2,
+.inicio .page__content h3,
+.inicio .page__content h4 {
+  text-align: left !important;
+}
 
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
