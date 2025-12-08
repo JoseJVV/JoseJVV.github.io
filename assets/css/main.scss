@@ -84,6 +84,8 @@ $muted-text-color: #b0b8c5;
   height: auto;
   margin: 0 auto;
 
+  margin-left: 4px;   /* mueve la imagen 4px a la derecha */
+
   pointer-events: none;     /* bloquea clic/arrastre */
   user-select: none;
   -webkit-user-drag: none;
