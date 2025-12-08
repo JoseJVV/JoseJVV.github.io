@@ -12,7 +12,7 @@ $muted-text-color: #b0b8c5;
 @import "minimal-mistakes/skins/dark";
 @import "minimal-mistakes";
 
-///////////////////////////////////////////////////////////////////////
+//////////////////////////// LOGO TITULO ///////////////////////////////////////////
 
 /* Contenedor del logo en la cabecera */
 .hero-logo {
@@ -48,7 +48,7 @@ $muted-text-color: #b0b8c5;
   }
 }
 
-/////////////////////////CV RESUMIDO/////////////////////////////////////////
+///////////////////////// CV RESUMIDO /////////////////////////////////////////
 /* Contenedor de la imagen de CV */
 .cv-wrapper {
   text-align: center;
@@ -58,7 +58,7 @@ $muted-text-color: #b0b8c5;
 /* Imagen del CV: bloqueada y responsive */
 .cv-image {
   max-width: 1600px;        /* límite en escritorio */
-  width: 110%;              /* se adapta al contenedor */
+  width: 140%;              /* se adapta al contenedor */
   height: auto;
   pointer-events: none;     /* no se puede pinchar/arrastrar */
   user-select: none;        /* no seleccionable */
