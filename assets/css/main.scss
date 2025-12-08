@@ -51,19 +51,26 @@ $muted-text-color: #b0b8c5;
 ///////////////////////// CV RESUMIDO /////////////////////////////////////////
 /* Contenedor de la imagen de CV */
 .cv-wrapper {
-  text-align: center;
-  margin: 1rem 0 3rem 0;
+  width: 100%;
+  overflow: visible;        /* deja que crezca sin recorte */
+  margin: 2rem 0;
+  text-align: left;         /* alinea todo a la izquierda */
 }
 
 /* Imagen del CV: bloqueada y responsive */
 .cv-image {
-  /*max-width: 1200px;         límite en escritorio */
-  width: 140%;              /* se adapta al contenedor */
-  height: auto;
+  
+  display: block;
 
-  display: block;           
-  margin-left: auto;        
-  margin-right: auto; 
+  /* Mantiene la imagen con su tamaño original grande */
+  width: auto;
+  max-width: none;
+
+  /* Aumenta el tamaño SIN que se centre ni se achique */
+  transform: scale(1.35);      /* ← AJUSTA AQUÍ EL TAMAÑO */
+  transform-origin: top left;  /* ← La expande desde la esquina izquierda */
+
+  height: auto;
 
   pointer-events: none;     /* no se puede pinchar/arrastrar */
   user-select: none;        /* no seleccionable */
