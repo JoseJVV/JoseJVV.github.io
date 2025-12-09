@@ -43,9 +43,9 @@ My goal is to transform each concept into something that inspires, excites, and 
        oncontextmenu="return false;">
 </div>
 
-### Proyectos profesionales destacados
+### Featured professional projects
 
-- **[Proyecto 1]** – Breve descripción del proyecto, cliente o estudio, y tu rol principal.
+- **[Imagenes renderizadas 3D para paginas Web]** 
 <div class="featured-projects">
 
   <article class="project-card">
@@ -55,11 +55,12 @@ My goal is to transform each concept into something that inspires, excites, and 
            alt="Título del proyecto 1">
     </figure>
 
-    <h3 class="project-title">Proyecto 1 – Solute1</h3>
     <p class="project-description">
-      Breve descripción del proyecto, cliente o propósito del arte.
+      Modelado 3D de estructuras mecánicas para portadas de pàginas web.
     </p>
   </article>
+
+
 
 </div>
 
