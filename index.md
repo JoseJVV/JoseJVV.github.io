@@ -45,7 +45,7 @@ My goal is to transform each concept into something that inspires, excites, and 
 
 ### Featured professional projects
 
-- **[Imagenes renderizadas 3D para paginas Web]** 
+- **Imagenes renderizadas 3D para paginas Web** 
 <div class="featured-projects">
 
   <article class="project-card">
@@ -63,7 +63,7 @@ My goal is to transform each concept into something that inspires, excites, and 
 
 
 
-- **[Animaciones 3D educativas]**
+- **Animaciones 3D educativas**
 
 <div class="featured-projects">
 
