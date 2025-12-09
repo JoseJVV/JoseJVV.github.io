@@ -59,14 +59,55 @@ My goal is to transform each concept into something that inspires, excites, and 
       Modelado 3D de estructuras mecánicas para portadas de pàginas web.
     </p>
   </article>
-
-
-
 </div>
 
 
 
-- **[Proyecto 2]** – Qué resolviste visualmente (diseño de personajes, entornos, props…).
+- **[Animaciones 3D educativas]**
+
+<div class="featured-projects">
+
+  <article class="project-card project-card--video">
+    <figure class="project-video-thumb"
+            data-video="/PROYECTOS/3D/Animacion03.mp4">
+      <img src="/PROYECTOS/3D/Animacion03.png"
+           alt="Proyecto 2 – Vídeo demostración">
+      <span class="video-thumb-play">▶</span>
+    </figure>
+
+    <p class="project-description">
+      Breve descripción del vídeo: objetivo, tipo de proyecto, software usado, etc.
+    </p>
+  </article>
+
+  <article class="project-card project-card--video">
+    <figure class="project-video-thumb"
+            data-video="/PROYECTOS/3D/Animacion_02.mp4">
+      <img src="/PROYECTOS/3D/Animacion_02.png"
+           alt="Proyecto 2 – Vídeo demostración">
+      <span class="video-thumb-play">▶</span>
+    </figure>
+
+    <p class="project-description">
+      Breve descripción del vídeo: objetivo, tipo de proyecto, software usado, etc.
+    </p>
+  </article>
+
+   <article class="project-card project-card--video">
+    <figure class="project-video-thumb"
+            data-video="/PROYECTOS/3D/Animacion_04.mp4">
+      <img src="/PROYECTOS/3D/Animacion_04.png"
+           alt="Proyecto 2 – Vídeo demostración">
+      <span class="video-thumb-play">▶</span>
+    </figure>
+
+    <p class="project-description">
+      Breve descripción del vídeo: objetivo, tipo de proyecto, software usado, etc.
+    </p>
+  </article>
+
+</div>
+
 - **[Proyecto 3]** – Técnicas y herramientas utilizadas.
 Puedes detallar estos proyectos más adelante dentro de las secciones de **Ilustración** y **3D**.
 
@@ -91,57 +132,143 @@ Puedes detallar estos proyectos más adelante dentro de las secciones de **Ilust
   <img src="" alt="" id="image-lightbox-img">
 </div>
 
+
+<div class="video-lightbox" id="video-lightbox" aria-hidden="true">
+  <div class="video-lightbox__backdrop"></div>
+
+  <div class="video-lightbox__controls video-lightbox__controls--left">
+    <button type="button"
+            class="video-lightbox__btn video-lightbox__btn--fullscreen"
+            aria-label="Ver a pantalla completa">⤢</button>
+  </div>
+
+  <div class="video-lightbox__controls video-lightbox__controls--right">
+    <button type="button"
+            class="video-lightbox__btn video-lightbox__btn--close"
+            aria-label="Cerrar vídeo">✕</button>
+  </div>
+
+  <div class="video-lightbox__inner">
+    <video id="video-lightbox-video" preload="metadata"></video>
+    <div class="video-lightbox__pause-icon">⏸</div>
+  </div>
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  /* === LIGHTBOX DE IMAGEN (ya lo tenías) === */
   const thumbs = document.querySelectorAll(".project-thumb");
   const lightbox = document.getElementById("image-lightbox");
   const lightboxImg = document.getElementById("image-lightbox-img");
-  const backdrop = lightbox.querySelector(".image-lightbox__backdrop");
-  const btnClose = lightbox.querySelector(".image-lightbox__btn--close");
-  const btnFullscreen = lightbox.querySelector(".image-lightbox__btn--fullscreen");
+  const backdrop = lightbox?.querySelector(".image-lightbox__backdrop");
+  const btnClose = lightbox?.querySelector(".image-lightbox__btn--close");
+  const btnFullscreen = lightbox?.querySelector(".image-lightbox__btn--fullscreen");
 
-  // Abrir lightbox al hacer click en miniatura
-  thumbs.forEach(thumb => {
-    thumb.addEventListener("click", () => {
-      const fullSrc = thumb.getAttribute("data-full");
-      const img = thumb.querySelector("img");
-      const imgAlt = img ? img.getAttribute("alt") : "";
-      lightboxImg.src = fullSrc;
-      lightboxImg.alt = imgAlt;
-      lightbox.classList.add("is-active");
-      document.body.style.overflow = "hidden";
+  if (lightbox && lightboxImg && backdrop && btnClose && btnFullscreen) {
+    thumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        const fullSrc = thumb.getAttribute("data-full");
+        const img = thumb.querySelector("img");
+        const imgAlt = img ? img.getAttribute("alt") : "";
+        lightboxImg.src = fullSrc;
+        lightboxImg.alt = imgAlt;
+        lightbox.classList.add("is-active");
+        document.body.style.overflow = "hidden";
+      });
     });
-  });
 
-  // Cerrar lightbox
-  function closeLightbox() {
-    lightbox.classList.remove("is-active");
-    document.body.style.overflow = "";
-    if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {});
+    function closeImageLightbox() {
+      lightbox.classList.remove("is-active");
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
     }
+
+    btnClose.addEventListener("click", closeImageLightbox);
+    backdrop.addEventListener("click", closeImageLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("is-active")) {
+        closeImageLightbox();
+      }
+    });
+
+    btnFullscreen.addEventListener("click", () => {
+      if (!document.fullscreenElement) {
+        lightbox.requestFullscreen?.().catch(() => {});
+      } else {
+        document.exitFullscreen?.().catch(() => {});
+      }
+    });
   }
 
-  btnClose.addEventListener("click", closeLightbox);
-  backdrop.addEventListener("click", closeLightbox);
+  /* === LIGHTBOX DE VÍDEO === */
+  const videoThumbs = document.querySelectorAll(".project-video-thumb");
+  const videoBox = document.getElementById("video-lightbox");
+  const videoBackdrop = videoBox?.querySelector(".video-lightbox__backdrop");
+  const videoEl = document.getElementById("video-lightbox-video");
+  const videoBtnClose = videoBox?.querySelector(".video-lightbox__btn--close");
+  const videoBtnFullscreen = videoBox?.querySelector(".video-lightbox__btn--fullscreen");
+  const pauseIcon = videoBox?.querySelector(".video-lightbox__pause-icon");
 
-  // Cerrar con la tecla ESC
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lightbox.classList.contains("is-active")) {
-      closeLightbox();
-    }
-  });
+  if (videoBox && videoEl && videoBackdrop && videoBtnClose && videoBtnFullscreen && pauseIcon) {
+    // Abrir y reproducir vídeo
+    videoThumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        const src = thumb.getAttribute("data-video");
+        videoEl.src = src;
+        videoBox.classList.add("is-active");
+        document.body.style.overflow = "hidden";
+        pauseIcon.style.display = "none";
 
-  // Pantalla completa
-  btnFullscreen.addEventListener("click", () => {
-    if (!document.fullscreenElement) {
-      if (lightbox.requestFullscreen) {
-        lightbox.requestFullscreen().catch(() => {});
+        videoEl.currentTime = 0;
+        videoEl.play().catch(() => {});
+      });
+    });
+
+    // Pausar / reanudar al hacer click sobre el vídeo
+    videoEl.addEventListener("click", () => {
+      if (videoEl.paused) {
+        videoEl.play().catch(() => {});
+        pauseIcon.style.display = "none";
+      } else {
+        videoEl.pause();
+        pauseIcon.style.display = "flex";
       }
-    } else {
-      document.exitFullscreen?.().catch(() => {});
+    });
+
+    // Cerrar vídeo
+    function closeVideoLightbox() {
+      videoBox.classList.remove("is-active");
+      videoEl.pause();
+      videoEl.src = "";
+      pauseIcon.style.display = "none";
+      document.body.style.overflow = "";
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
     }
-  });
+
+    videoBtnClose.addEventListener("click", closeVideoLightbox);
+    videoBackdrop.addEventListener("click", closeVideoLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && videoBox.classList.contains("is-active")) {
+        closeVideoLightbox();
+      }
+    });
+
+    // Pantalla completa
+    videoBtnFullscreen.addEventListener("click", () => {
+      if (!document.fullscreenElement) {
+        videoBox.requestFullscreen?.().catch(() => {});
+      } else {
+        document.exitFullscreen?.().catch(() => {});
+      }
+    });
+  }
 });
 </script>
 
