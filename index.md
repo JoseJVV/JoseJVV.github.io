@@ -152,3 +152,11 @@ document.addEventListener("contextmenu", function(e) {
   }
 });
 </script>
+
+<script>
+document.addEventListener("contextmenu", function (e) {
+  if (e.target && e.target.tagName === "IMG") {
+    e.preventDefault();
+  }
+});
+</script>
