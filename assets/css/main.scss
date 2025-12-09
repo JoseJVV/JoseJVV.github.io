@@ -192,6 +192,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+
+   margin-left: 2.5rem;   /* ← desplaza TODO el bloque hacia la derecha */
 }
 
 .project-card {
