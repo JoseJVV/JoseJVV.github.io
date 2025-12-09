@@ -24,13 +24,16 @@ Illustration · Concept Art · 3D Artist Junior.
 
 
 ## About me
-I'm a **Junior 3D Artist**, **Generalist**, and **Illustrator**, and I'm passionate about bringing worlds to life. My specialty is **Anime-style Character Concept Art**, creating visual identities that work in both **comics** and **video games**.
+
+I'm a **Junior 3D Artist**, **Generalist**, and **Illustrator** specializing in anime-style character concept art for comics and video games. My experience encompasses 3D modeling of props, environments, and characters, as well as 3D animation and game development in Unity.My specialty is **Anime-style Character Concept Art**, creating visual identities that work in both **comics** and **video games**.
+
+I work with a balanced technical and aesthetic approach, paying close attention to every detail of the creative process: from concept design to final implementation. My goal is to deliver efficient, expressive, and tailored visual solutions for each project, creating experiences that stand out for their style and quality.
 
 - I work from the initial idea to the final result: **3D modeling** of props, **environments, and characters**, **3D animation**, and **development in Unity**.
 
 - I also have experience as an **illustrator for publishers**, developing images that narrate, complement, and enhance stories.
 
-My goal is to transform each concept into something that inspires, excites, and connects, turning imagination into real visual experiences.
+I always look to collaborate with studios, developers, or clients who value creativity, versatility, and visual innovation in their productions.
 
 
 
