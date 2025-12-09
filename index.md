@@ -71,7 +71,7 @@ My goal is to transform each concept into something that inspires, excites, and 
     <figure class="project-video-thumb"
             data-video="/PROYECTOS/3D/Animacion03.mp4">
       <img src="/PROYECTOS/3D/Animacion03.png"
-           alt="Proyecto 2 – Vídeo demostración">
+           alt="Proyecto 2 – Vídeo demostración 1">
       <span class="video-thumb-play">▶</span>
     </figure>
 
@@ -84,7 +84,7 @@ My goal is to transform each concept into something that inspires, excites, and 
     <figure class="project-video-thumb"
             data-video="/PROYECTOS/3D/Animacion_02.mp4">
       <img src="/PROYECTOS/3D/Animacion_02.png"
-           alt="Proyecto 2 – Vídeo demostración">
+           alt="Proyecto 2 – Vídeo demostración 2">
       <span class="video-thumb-play">▶</span>
     </figure>
 
@@ -97,7 +97,7 @@ My goal is to transform each concept into something that inspires, excites, and 
     <figure class="project-video-thumb"
             data-video="/PROYECTOS/3D/Animacion_04.mp4">
       <img src="/PROYECTOS/3D/Animacion_04.png"
-           alt="Proyecto 2 – Vídeo demostración">
+           alt="Proyecto 2 – Vídeo demostración 3">
       <span class="video-thumb-play">▶</span>
     </figure>
 
