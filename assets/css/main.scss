@@ -411,6 +411,58 @@ body {
   transform: translateY(-1px);
 }
 
+/* === BARRA DE PROGRESO DEL VÍDEO === */
+
+.video-lightbox__progress {
+  margin-top: 0.75rem;
+}
+
+#video-progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  max-width: 90vw;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Relleno de la barra (WebKit) */
+#video-progress::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* “Esfera” (thumb) – WebKit */
+#video-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0097f5; /* azul tipo ArtStation */
+  margin-top: -4px;
+  box-shadow: 0 0 0 2px #10121c;
+}
+
+/* Firefox */
+#video-progress::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#video-progress::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0097f5;
+  border: 2px solid #10121c;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 /* === PROTECCIÓN GLOBAL DE IMÁGENES (sin afectar interactividad) === */

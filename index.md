@@ -25,7 +25,9 @@ Illustration · Concept Art · 3D Artist Junior.
 
 ## About me
 
-I'm a **Junior 3D Artist**, **Generalist**, and **Illustrator** specializing in anime-style character concept art for comics and video games. My experience encompasses 3D modeling of props, environments, and characters, as well as 3D animation and game development in Unity.My specialty is **Anime-style Character Concept Art**, creating visual identities that work in both **comics** and **video games**.
+I'm a **Junior 3D Artist**, **Generalist**, and **Illustrator**.
+
+My experience encompasses 3D modeling of props, environments, and characters, as well as 3D animation and game development in Unity.My specialty is **Anime-style Character Concept Art**, creating visual identities that work in both **comics** and **video games**.
 
 I work with a balanced technical and aesthetic approach, paying close attention to every detail of the creative process: from concept design to final implementation. My goal is to deliver efficient, expressive, and tailored visual solutions for each project, creating experiences that stand out for their style and quality.
 
@@ -154,6 +156,14 @@ Puedes detallar estos proyectos más adelante dentro de las secciones de **Ilust
   <div class="video-lightbox__inner">
     <video id="video-lightbox-video" preload="metadata"></video>
     <div class="video-lightbox__pause-icon">⏸</div>
+
+  <div class="video-lightbox__progress">
+    <input type="range"
+           id="video-progress"
+           min="0"
+           max="100"
+           value="0"
+           step="0.1">
   </div>
 </div>
 
@@ -215,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const videoBtnClose = videoBox?.querySelector(".video-lightbox__btn--close");
   const videoBtnFullscreen = videoBox?.querySelector(".video-lightbox__btn--fullscreen");
   const pauseIcon = videoBox?.querySelector(".video-lightbox__pause-icon");
+  const videoProgress = document.getElementById("video-progress");
 
   if (videoBox && videoEl && videoBackdrop && videoBtnClose && videoBtnFullscreen && pauseIcon) {
     // Abrir y reproducir vídeo
@@ -229,6 +240,20 @@ document.addEventListener("DOMContentLoaded", function () {
         videoEl.currentTime = 0;
         videoEl.play().catch(() => {});
       });
+    });
+
+   // Actualizar la barra conforme avanza el vídeo
+    videoEl.addEventListener("timeupdate", () => {
+      if (!videoEl.duration) return;
+      const percentage = (videoEl.currentTime / videoEl.duration) * 100;
+      videoProgress.value = percentage;
+    });
+
+    // Arrastrar la esfera para avanzar/retroceder
+    videoProgress.addEventListener("input", () => {
+      if (!videoEl.duration) return;
+      const newTime = (videoProgress.value / 100) * videoEl.duration;
+      videoEl.currentTime = newTime;
     });
 
     // Pausar / reanudar al hacer click sobre el vídeo
@@ -248,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
       videoEl.pause();
       videoEl.src = "";
       pauseIcon.style.display = "none";
+      videoProgress.value = 0;
       document.body.style.overflow = "";
       if (document.fullscreenElement) {
         document.exitFullscreen().catch(() => {});
