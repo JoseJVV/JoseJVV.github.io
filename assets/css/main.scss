@@ -285,3 +285,15 @@ body {
 #image-lightbox-img {
   pointer-events: none;
 }
+
+/* === PROTECCIÓN GLOBAL DE IMÁGENES === */
+img {
+  pointer-events: none !important;   /* bloquea click derecho y arrastre */
+  -webkit-user-drag: none !important;
+  user-select: none !important;
+}
+
+/* Opcional: bloquea menú contextual solo en imágenes */
+img {
+  -webkit-touch-callout: none !important;
+}
