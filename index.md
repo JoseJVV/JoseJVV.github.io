@@ -70,7 +70,7 @@ My goal is to transform each concept into something that inspires, excites, and 
   <article class="project-card project-card--video">
     <figure class="project-video-thumb"
             data-video="/PROYECTOS/3D/Animacion03.mp4">
-      <img src="/PROYECTOS/3D/Animacion03.png"
+      <img src="/PROYECTOS/3D/Animacion03.jpg"
            alt="Proyecto 2 – Vídeo demostración 1">
       <span class="video-thumb-play">▶</span>
     </figure>
