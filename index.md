@@ -34,7 +34,7 @@ My goal is to transform each concept into something that inspires, excites, and 
 
 
 
-### Resumen CV
+
 
 <div class="cv-wrapper">
   <img src="/assets/images/CVResumen.png"
@@ -144,3 +144,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+
+<script>
+document.addEventListener("contextmenu", function(e) {
+  if (e.target.tagName === "IMG") {
+    e.preventDefault();
+  }
+});
+</script>
