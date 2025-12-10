@@ -297,9 +297,20 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  cursor: pointer;
+  cursor: default;   /* ya NO pone la mano en todo el bloque */
   max-width: 260px;
 }
+/* La mano solo en la parte clicable real: imagen + icono */
+.project-unity-link {
+  display: inline-block;
+  cursor: default;   /* el enlace en sí no muestra la mano en todo el rectángulo */
+}
+
+.project-unity-link img,
+.project-unity-link .video-thumb-play {
+  cursor: pointer;   /* aquí sí: dentro del círculo y el icono ▶ */
+}
+
 
 /* Imagen dentro (vídeo o juego) */
 .project-video-thumb img,
