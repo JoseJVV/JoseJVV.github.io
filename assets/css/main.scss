@@ -291,20 +291,37 @@ body {
 
 /* === TARJETA DE VÍDEO EN PROYECTOS DESTACADOS === */
 
-/* Tarjeta de vídeo y tarjeta de juego comparten estilos base */
-.project-video-thumb,
-.project-unity-thumb {
+/* MINIATURAS DE VÍDEO (que sigan como antes) */
+.project-video-thumb {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  cursor: default;   /* ya NO pone la mano en todo el bloque */
+  cursor: pointer;      /* mano EN TODA LA MINIATURA de vídeo */
   max-width: 260px;
 }
-/* La mano solo en la parte clicable real: imagen + icono */
+
+/* MINIATURA DEL JUEGO (comportamiento propio) */
+.project-unity-thumb {
+  position: relative;
+  overflow: hidden;
+  /* el borde circular lo da project-thumb-circle */
+  cursor: default;      /* el bloque entero NO muestra mano */
+}
+
+/* El enlace alrededor NO muestra mano en todo el rectángulo */
 .project-unity-link {
   display: inline-block;
-  cursor: default;   /* el enlace en sí no muestra la mano en todo el rectángulo */
+  cursor: default;
 }
+
+/* La mano SOLO dentro del círculo y el icono ▶ */
+.project-unity-link img,
+.project-unity-link .video-thumb-play {
+  cursor: pointer;
+}
+
+
+
 
 .project-unity-link img,
 .project-unity-link .video-thumb-play {
@@ -329,11 +346,12 @@ body {
   transform: scale(1.03);
 }
 
+/* Forma y centrado de la miniatura circular del juego */
 .project-thumb-circle {
   border-radius: 50%;
-  max-width: 220px;
+  max-width: 220px;      /* el tamaño que tenías cuando se veía bien */
   aspect-ratio: 1 / 1;
-  margin: 0 auto;
+  margin: 0 auto;        /* centrado horizontal */
 }
 
 .project-thumb-circle img {
