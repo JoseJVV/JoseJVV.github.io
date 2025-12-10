@@ -113,8 +113,26 @@ I always look to collaborate with studios, developers, or clients who value crea
 
 </div>
 
-- **[Proyecto 3]** – Técnicas y herramientas utilizadas.
-Puedes detallar estos proyectos más adelante dentro de las secciones de **Ilustración** y **3D**.
+- **Videojuego Arcade** 
+
+<article class="project-card project-card--unity">
+  <a href="https://josejvv.github.io/CelDamagePlanes/" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="project-unity-link">
+    <figure class="project-video-thumb project-thumb-circle">
+      <img src="/assets/images/MiniaturaJuego.png"
+           alt="Proyecto 3 – Demo juego Unity">
+
+      <span class="video-thumb-play">▶</span>
+    </figure>
+  </a>
+
+  <h3 class="project-title">Cel Damage Planes</h3>
+  <p class="project-description">
+    Breve descripción del juego: género, mecánicas, rol que tuviste (programación, arte, UI…), y qué se puede probar en la demo.
+  </p>
+</article>
 
 
 
