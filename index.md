@@ -122,8 +122,7 @@ I always look to collaborate with studios, developers, or clients who value crea
      class="project-unity-link">
     <figure class="project-video-thumb project-thumb-circle">
       <img src="/assets/images/MiniaturaJuego.png"
-           alt="Proyecto 3 – Demo juego Unity">
-
+           alt="Cel Damage Planes">
       <span class="video-thumb-play">▶</span>
     </figure>
   </a>

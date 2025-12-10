@@ -291,28 +291,45 @@ body {
 
 /* === TARJETA DE VÍDEO EN PROYECTOS DESTACADOS === */
 
-/* Que el vídeo use la misma rejilla que las imágenes */
-.project-card--video .project-video-thumb {
+/* Tarjeta de vídeo y tarjeta de juego comparten estilos base */
+.project-video-thumb,
+.project-unity-thumb {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   cursor: pointer;
-  max-width: 260px;  /* parecido a la miniatura de imagen */
+  max-width: 260px;
 }
 
-/* Miniatura del vídeo */
-.project-video-thumb img {
+/* Imagen dentro (vídeo o juego) */
+.project-video-thumb img,
+.project-unity-thumb img {
   display: block;
   width: 100%;
   height: auto;
   transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 
-/* Hover: gris + 20% transparencia + zoom suave */
-.project-video-thumb:hover img {
+/* Hover: gris + transparencia + zoom (vídeo y juego) */
+.project-video-thumb:hover img,
+.project-unity-thumb:hover img {
   filter: grayscale(100%);
-  opacity: 0.8;         /* 20% de transparencia */
+  opacity: 0.8;
   transform: scale(1.03);
+}
+
+.project-thumb-circle {
+  border-radius: 50%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.project-thumb-circle img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Icono de play encima de la miniatura */
@@ -463,22 +480,7 @@ body {
   border: 2px solid #10121c;
 }
 
-/* === MINIATURA CIRCULAR PARA JUEGO UNITY (PROYECTO 3) === */
 
-.project-thumb-circle {
-  border-radius: 50%;
-  max-width: 220px;     /* tamaño de la miniatura circular */
-  aspect-ratio: 1 / 1;  /* mantiene forma perfectamente circular */
-  margin: 0 auto;       /* centrada dentro de la tarjeta */
-}
-
-/* Asegura que la imagen respeta la forma circular */
-.project-thumb-circle img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 
