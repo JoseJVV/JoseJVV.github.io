@@ -234,8 +234,61 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* === LIGHTBOX DE VÍDEO === */
-  const videoThumbs = document.querySelectorAll(".project-video-thumb");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  /* === LIGHTBOX DE IMÁGENES (proyecto 1, etc.) === */
+  const imageLightbox = document.getElementById("image-lightbox");
+  const imageLightboxImg = document.getElementById("image-lightbox-img");
+  const imageBackdrop = imageLightbox?.querySelector(".image-lightbox__backdrop");
+  const imageBtnClose = imageLightbox?.querySelector(".image-lightbox__btn--close");
+  const imageBtnFullscreen = imageLightbox?.querySelector(".image-lightbox__btn--fullscreen");
+
+  const imageThumbs = document.querySelectorAll(".project-thumb");
+
+  if (imageLightbox && imageLightboxImg && imageBackdrop && imageBtnClose && imageBtnFullscreen) {
+    imageThumbs.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        const fullSrc = thumb.getAttribute("data-full");
+        const img = thumb.querySelector("img");
+        const imgAlt = img ? img.getAttribute("alt") : "";
+        if (!fullSrc) return;
+
+        imageLightboxImg.src = fullSrc;
+        imageLightboxImg.alt = imgAlt;
+        imageLightbox.classList.add("is-active");
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    function closeImageLightbox() {
+      imageLightbox.classList.remove("is-active");
+      imageLightboxImg.src = "";
+      document.body.style.overflow = "";
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    imageBtnClose.addEventListener("click", closeImageLightbox);
+    imageBackdrop.addEventListener("click", closeImageLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && imageLightbox.classList.contains("is-active")) {
+        closeImageLightbox();
+      }
+    });
+
+    imageBtnFullscreen.addEventListener("click", () => {
+      if (!document.fullscreenElement) {
+        imageLightbox.requestFullscreen?.().catch(() => {});
+      } else {
+        document.exitFullscreen?.().catch(() => {});
+      }
+    });
+  }
+
+  /* === LIGHTBOX DE VÍDEO (SOLO TARJETAS DE VÍDEO, NO JUEGO) === */
+  const videoThumbs = document.querySelectorAll(".project-card--video .project-video-thumb");
   const videoBox = document.getElementById("video-lightbox");
   const videoBackdrop = videoBox?.querySelector(".video-lightbox__backdrop");
   const videoEl = document.getElementById("video-lightbox-video");
@@ -244,36 +297,40 @@ document.addEventListener("DOMContentLoaded", function () {
   const pauseIcon = videoBox?.querySelector(".video-lightbox__pause-icon");
   const videoProgress = document.getElementById("video-progress");
 
-  if (videoBox && videoEl && videoBackdrop && videoBtnClose && videoBtnFullscreen && pauseIcon) {
+  if (videoBox && videoEl && videoBackdrop && videoBtnClose && videoBtnFullscreen && pauseIcon && videoProgress) {
     // Abrir y reproducir vídeo
     videoThumbs.forEach(thumb => {
-      thumb.addEventListener("click", () => {
+      thumb.addEventListener("click", (e) => {
         const src = thumb.getAttribute("data-video");
+        if (!src) return;       // si no hay data-video, no hace NADA
+
+        e.preventDefault();     // por si algún día hay <a> alrededor
         videoEl.src = src;
         videoBox.classList.add("is-active");
         document.body.style.overflow = "hidden";
         pauseIcon.style.display = "none";
+        videoProgress.value = 0;
 
         videoEl.currentTime = 0;
         videoEl.play().catch(() => {});
       });
     });
 
-   // Actualizar la barra conforme avanza el vídeo
+    // Actualizar la barra de progreso
     videoEl.addEventListener("timeupdate", () => {
       if (!videoEl.duration) return;
       const percentage = (videoEl.currentTime / videoEl.duration) * 100;
       videoProgress.value = percentage;
     });
 
-    // Arrastrar la esfera para avanzar/retroceder
+    // Mover la barra para avanzar/retroceder
     videoProgress.addEventListener("input", () => {
       if (!videoEl.duration) return;
       const newTime = (videoProgress.value / 100) * videoEl.duration;
       videoEl.currentTime = newTime;
     });
 
-    // Pausar / reanudar al hacer click sobre el vídeo
+    // Pausar/Reanudar al hacer click en el vídeo
     videoEl.addEventListener("click", () => {
       if (videoEl.paused) {
         videoEl.play().catch(() => {});
@@ -317,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 </script>
+
 
 
 <script>
