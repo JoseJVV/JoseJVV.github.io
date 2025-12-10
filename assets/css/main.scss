@@ -310,7 +310,7 @@ body {
 
 /* El enlace alrededor NO muestra mano en todo el rectángulo */
 .project-unity-link {
-  display: inline-block;
+  
   cursor: default;
 }
 
@@ -346,24 +346,19 @@ body {
   transform: scale(1.03);
 }
 
-/* === REPOSICIONAR MINIATURA DEL JUEGO (PROYECTO UNITY) === */
-
-/* El artículo del juego sin desplazamientos laterales extra */
-.project-card--unity {
-  margin-left: 0 !important;
-}
-
-/* La miniatura del juego, centrada bajo el título "Videojuego Arcade" */
-.project-card--unity .project-unity-thumb {
-  display: block;
-  margin: 1.5rem auto 0 !important;  /* centrada horizontal */
-}
-
-/* Aseguramos que el círculo mantiene su centrado y tamaño original */
-.project-card--unity .project-thumb-circle {
-  margin: 0 auto !important;
+/* Forma y centrado de la miniatura circular del juego */
+.project-thumb-circle {
+  border-radius: 50%;
   max-width: 220px;      /* el tamaño que tenías cuando se veía bien */
   aspect-ratio: 1 / 1;
+  margin: 0 auto;        /* centrado horizontal */
+}
+
+.project-thumb-circle img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Icono de play encima de la miniatura */
