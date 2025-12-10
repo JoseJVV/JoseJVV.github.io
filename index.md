@@ -123,7 +123,6 @@ I always look to collaborate with studios, developers, or clients who value crea
     <figure class="project-video-thumb project-thumb-circle">
       <img src="/assets/images/MiniaturaJuego.png"
            alt="Cel Damage Planes">
-      <span class="video-thumb-play">▶</span>
     </figure>
   </a>
 
