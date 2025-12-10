@@ -134,8 +134,6 @@ I always look to collaborate with studios, developers, or clients who value crea
 </article>
 
 
-
-
 <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
   <div class="image-lightbox__backdrop"></div>
 
@@ -153,7 +151,6 @@ I always look to collaborate with studios, developers, or clients who value crea
 
   <img src="" alt="" id="image-lightbox-img">
 </div>
-
 
 <div class="video-lightbox" id="video-lightbox" aria-hidden="true">
   <div class="video-lightbox__backdrop"></div>
@@ -173,70 +170,21 @@ I always look to collaborate with studios, developers, or clients who value crea
   <div class="video-lightbox__inner">
     <video id="video-lightbox-video" preload="metadata"></video>
     <div class="video-lightbox__pause-icon">⏸</div>
-
-  <div class="video-lightbox__progress">
-    <input type="range"
-           id="video-progress"
-           min="0"
-           max="100"
-           value="0"
-           step="0.1">
+    <div class="video-lightbox__progress">
+      <input type="range"
+             id="video-progress"
+             min="0"
+             max="100"
+             value="0"
+             step="0.1">
+    </div>
   </div>
 </div>
 
+<!-- SCRIPT ÚNICO: LIGHTBOX IMAGEN + VÍDEO -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  /* === LIGHTBOX DE IMAGEN (ya lo tenías) === */
-  const thumbs = document.querySelectorAll(".project-thumb");
-  const lightbox = document.getElementById("image-lightbox");
-  const lightboxImg = document.getElementById("image-lightbox-img");
-  const backdrop = lightbox?.querySelector(".image-lightbox__backdrop");
-  const btnClose = lightbox?.querySelector(".image-lightbox__btn--close");
-  const btnFullscreen = lightbox?.querySelector(".image-lightbox__btn--fullscreen");
-
-  if (lightbox && lightboxImg && backdrop && btnClose && btnFullscreen) {
-    thumbs.forEach(thumb => {
-      thumb.addEventListener("click", () => {
-        const fullSrc = thumb.getAttribute("data-full");
-        const img = thumb.querySelector("img");
-        const imgAlt = img ? img.getAttribute("alt") : "";
-        lightboxImg.src = fullSrc;
-        lightboxImg.alt = imgAlt;
-        lightbox.classList.add("is-active");
-        document.body.style.overflow = "hidden";
-      });
-    });
-
-    function closeImageLightbox() {
-      lightbox.classList.remove("is-active");
-      lightboxImg.src = "";
-      document.body.style.overflow = "";
-      if (document.fullscreenElement) {
-        document.exitFullscreen().catch(() => {});
-      }
-    }
-
-    btnClose.addEventListener("click", closeImageLightbox);
-    backdrop.addEventListener("click", closeImageLightbox);
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lightbox.classList.contains("is-active")) {
-        closeImageLightbox();
-      }
-    });
-
-    btnFullscreen.addEventListener("click", () => {
-      if (!document.fullscreenElement) {
-        lightbox.requestFullscreen?.().catch(() => {});
-      } else {
-        document.exitFullscreen?.().catch(() => {});
-      }
-    });
-  }
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  /* === LIGHTBOX DE IMÁGENES (proyecto 1, etc.) === */
+  /* === LIGHTBOX DE IMÁGENES (Proyecto 1) === */
   const imageLightbox = document.getElementById("image-lightbox");
   const imageLightboxImg = document.getElementById("image-lightbox-img");
   const imageBackdrop = imageLightbox?.querySelector(".image-lightbox__backdrop");
@@ -302,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
     videoThumbs.forEach(thumb => {
       thumb.addEventListener("click", (e) => {
         const src = thumb.getAttribute("data-video");
-        if (!src) return;       // si no hay data-video, no hace NADA
+        if (!src) return;       // si no hay data-video, no hace nada
 
         e.preventDefault();     // por si algún día hay <a> alrededor
         videoEl.src = src;
@@ -316,14 +264,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Actualizar la barra de progreso
+    // Actualizar barra de progreso
     videoEl.addEventListener("timeupdate", () => {
       if (!videoEl.duration) return;
       const percentage = (videoEl.currentTime / videoEl.duration) * 100;
       videoProgress.value = percentage;
     });
 
-    // Mover la barra para avanzar/retroceder
+    // Mover barra para avanzar/retroceder
     videoProgress.addEventListener("input", () => {
       if (!videoEl.duration) return;
       const newTime = (videoProgress.value / 100) * videoEl.duration;
@@ -375,16 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-
-
-<script>
-document.addEventListener("contextmenu", function(e) {
-  if (e.target.tagName === "IMG") {
-    e.preventDefault();
-  }
-});
-</script>
-
+<!-- SCRIPT ÚNICO PARA BLOQUEAR CLICK DERECHO EN IMÁGENES -->
 <script>
 document.addEventListener("contextmenu", function (e) {
   if (e.target && e.target.tagName === "IMG") {
