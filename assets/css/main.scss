@@ -597,7 +597,7 @@ img {
 /* Hacer que la imagen inferior use todo el ancho de su celda en escritorio */
 @media (min-width: 901px) {
   .home-hero-gallery .home-hero-item:nth-child(1) img {
-     width: 85%;      /* AJUSTA AQUÍ EL TAMAÑO */
+     width: 90%;     /* AJUSTA AQUÍ EL TAMAÑO */
     max-width: 1100px;  /* LIMITA el tamaño máximo */
     height: auto;
   }
