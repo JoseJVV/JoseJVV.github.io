@@ -589,9 +589,17 @@ img {
 /* Posicionamiento de las 3 imágenes de portada usando el orden en el DOM */
 /* 1ª imagen (habitación 3D) -> fila 2, columna centro */
 .home-hero-gallery .home-hero-item:nth-child(1) {
-  grid-column: 2;
+  grid-column: 2 / span 2;   /* ocupa columnas 2 y 3 */
   grid-row: 2;
-  margin-top: 3rem;   /* separación vertical respecto a la fila de arriba */
+  margin-top: 3rem;          /* separación vertical respecto a la fila de arriba */
+}
+
+/* Hacer que la imagen inferior use todo el ancho de su celda en escritorio */
+@media (min-width: 901px) {
+  .home-hero-gallery .home-hero-item:nth-child(1) img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* 2ª imagen (personaje y lobo) -> fila 1, columna centro */
@@ -624,7 +632,7 @@ img {
   .home-hero-gallery {
     width: 100%;
     max-width: 100%;
-    margin: 2rem auto 2.5rem;
+    
     padding: 0 1rem;
 
     /* 1 sola columna, imágenes en vertical */
