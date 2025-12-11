@@ -591,7 +591,8 @@ img {
 .home-hero-gallery .home-hero-item:nth-child(1) {
   grid-column: 1/ span 3;   /* ocupa columnas 2 y 3 */
   grid-row: 2;
-  margin-top: 1rem;          /* separación vertical respecto a la fila de arriba */
+  margin-top: 10rem;
+  margin-right: 20rem; 
 }
 
 /* Hacer que la imagen inferior use todo el ancho de su celda en escritorio */
