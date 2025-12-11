@@ -26,15 +26,15 @@ Illustration · Concept Art · 3D Artist Junior.
   </figure>
 
   <figure class="home-hero-item">
-    <img src="/PROYECTOS/INICIO/ilustracionCD.png"
-         alt="Diseño gráfico de portada y CD">
-  </figure>  
-
-  <figure class="home-hero-item">
     <img src="/PROYECTOS/INICIO/3D_1.png"
          alt="Habitación 3D y props para entorno interior">
   </figure>
 
+  <figure class="home-hero-item">
+    <img src="/PROYECTOS/INICIO/ilustracionCD.png"
+         alt="Diseño gráfico de portada y CD">
+  </figure>  
+  
 </div>
 
 
