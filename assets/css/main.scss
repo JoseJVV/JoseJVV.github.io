@@ -663,6 +663,16 @@ img {
   }
 }
 
+/* --- Aumentar tamaño de la imagen inferior SOLO en versión web --- */
+@media (min-width: 901px) {
+  .home-hero-gallery .home-hero-item:nth-child(1) img {
+    width: 100%;        /* la hace ocupar todo el ancho disponible */
+    max-width: 100%;    /* evita que se quede pequeña */
+    height: auto;
+  }
+}
+
+
 /* Eliminar scroll horizontal en toda la web */
 html, body {
   overflow-x: hidden !important;
