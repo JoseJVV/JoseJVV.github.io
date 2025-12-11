@@ -113,7 +113,7 @@ I always look to collaborate with studios, developers, or clients who value crea
 
 </div>
 
-- **Videogame Arcade (WEB)** 
+- **Videogame Arcade (WEB Version)** 
 
 <article class="project-card project-card--unity">
   <a href="https://josejvv.github.io/CelDamagePlanes/" 
