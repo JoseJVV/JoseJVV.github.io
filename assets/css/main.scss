@@ -556,36 +556,37 @@ img {
 
 ///////////////////////////////////////////////////////////////////////////
 
-/* === GALERÍA DE 3 IMÁGENES EN LA PÁGINA DE INICIO === */
+/* === GALERÍA DE 3 IMÁGENES EN LA PÁGINA DE INICIO (VERSIÓN GRANDE) === */
 
 .home-hero-gallery {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 2.5rem;                 /* espacio entre las tres imágenes */
-  max-width: 1200px;           /* ancho máximo del conjunto */
-  margin: 3rem auto 3.5rem;    /* separación respecto al logo y al texto de "About me" */
+  gap: 4rem;                 /* mayor espacio, como en tu referencia */
+  max-width: 1600px;         /* más ancho, imágenes grandes */
+  margin: 5rem auto 4rem;    /* más margen arriba */
 }
 
 .home-hero-item {
   flex: 0 1 33%;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .home-hero-item img {
-  display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 0;            /* sin bordes redondeados, como en tu referencia */
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5); /* opcional, para estilo portfolio */
 }
 
-/* En pantallas pequeñas (móvil), que no se rompa todo */
+/* Versión móvil */
 @media (max-width: 900px) {
   .home-hero-gallery {
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
+    max-width: 95%;
   }
 
   .home-hero-item {
