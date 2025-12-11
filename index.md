@@ -50,7 +50,7 @@ I always look to collaborate with studios, developers, or clients who value crea
 
 ### Featured professional projects
 
-- **Imagenes renderizadas 3D para paginas Web** 
+- **3D rendered images for web pages** 
 <div class="featured-projects">
 
   <article class="project-card">
@@ -61,14 +61,14 @@ I always look to collaborate with studios, developers, or clients who value crea
     </figure>
 
     <p class="project-description">
-      Modelado 3D de estructuras mecánicas para portadas de pàginas web.
+      3D modeling of mechanical structures for website covers.
     </p>
   </article>
 </div>
 
 
 
-- **Animaciones 3D educativas**
+- **Educational 3D animations**
 
 <div class="featured-projects">
 
@@ -81,7 +81,7 @@ I always look to collaborate with studios, developers, or clients who value crea
     </figure>
 
     <p class="project-description">
-      Breve descripción del vídeo: objetivo, tipo de proyecto, software usado, etc.
+      Animation to explain how a prototype machine works and what it is made of..
     </p>
   </article>
 
@@ -94,7 +94,7 @@ I always look to collaborate with studios, developers, or clients who value crea
     </figure>
 
     <p class="project-description">
-      Breve descripción del vídeo: objetivo, tipo de proyecto, software usado, etc.
+      Explanatory animation about maintenance inside a wind turbine.
     </p>
   </article>
 
@@ -107,13 +107,13 @@ I always look to collaborate with studios, developers, or clients who value crea
     </figure>
 
     <p class="project-description">
-      Breve descripción del vídeo: objetivo, tipo de proyecto, software usado, etc.
+      Explanatory animation about the function of a STATCOM Power Plant and its process..
     </p>
   </article>
 
 </div>
 
-- **Videojuego Arcade** 
+- **Videogame Arcade (WEB)** 
 
 <article class="project-card project-card--unity">
   <a href="https://josejvv.github.io/CelDamagePlanes/" 
@@ -128,7 +128,7 @@ I always look to collaborate with studios, developers, or clients who value crea
 
   <h3 class="project-title">Cel Damage Planes</h3>
   <p class="project-description">
-    Breve descripción del juego: género, mecánicas, rol que tuviste (programación, arte, UI…), y qué se puede probar en la demo.
+    A game made entirely in Unity, based on the classic Space Shooter, transformed into an airplane version, where the objective is to destroy as many enemy planes as possible and score points. All programming and animation of the 3D models was done by me.
   </p>
 </article>
 
