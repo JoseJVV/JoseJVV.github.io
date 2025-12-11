@@ -630,42 +630,42 @@ img {
   left:-20rem;/* AJUSTA este valor para más/menos desplazamiento */
 }
 
-/* === Versión móvil para la galería de inicio === */
+/* === VERSIÓN MÓVIL DEFINITIVA === */
 @media (max-width: 900px) {
+
+  /* La galería deja de ser GRID */
   .home-hero-gallery {
-    width: 100%;
-    max-width: 100%;
-    margin: 2rem auto 3rem;
-    padding: 0 1rem;
-
-    /* Sobrescribir el GRID de escritorio */
-    display: block !important;    /* 👈 importante el !important */
-    position: static;
+    display: flex !important;
+    flex-direction: column !important;   /* una imagen debajo de otra */
+    align-items: center !important;      /* centradas */
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    gap: 5px !important;                 /* margen entre imágenes */
   }
 
-  /* Cada figura una debajo de otra */
+  /* Cada item ocupa su propio bloque */
   .home-hero-gallery .home-hero-item {
-    display: block;
-    width: 100%;
-    margin: 0 0 2rem 0;           /* separación vertical entre imágenes */
+    display: block !important;
+    width: calc(100% - 10px) !important; /* deja 5px a cada lado */
+    margin: 0 auto !important;
   }
 
-  /* Anular posiciones especiales de escritorio */
+  /* Las imágenes dentro del item */
+  .home-hero-gallery .home-hero-item img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Anular cualquier posición del grid de escritorio */
   .home-hero-gallery .home-hero-item:nth-child(1),
   .home-hero-gallery .home-hero-item:nth-child(2),
   .home-hero-gallery .home-hero-item:nth-child(3) {
-    grid-column: auto;
-    grid-row: auto;
-    margin-top: 0;
-  }
-
-  /* Imágenes grandes, centradas y a ancho completo del contenedor */
-  .home-hero-gallery .home-hero-item img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin-top: 0 !important;
   }
 }
 
