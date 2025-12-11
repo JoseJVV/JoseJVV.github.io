@@ -125,19 +125,22 @@ body {
 
 
 /* === CABECERA / MENÚ FIJO === */
-/* Hacer que el header tenga el mismo color que el fondo */
+/* Fondo uniforme para toda la barra de navegación */
 .masthead,
-.masthead__inner-wrap {
-  background-color: #282d42;
-  /* box-shadow: none;
-  /* border-bottom: none;*/
+.masthead__inner-wrap,
+.greedy-nav {
+  background-color: #282d42;   /* 👉 el gris que quieras usar */
+  box-shadow: none;
+  border-bottom: none;
 }
+
 /* Que la barra de menú se quede fija arriba al hacer scroll */
 .masthead {
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+
 /* Para que el contenido no quede escondido detrás del header fijo */
 .page {
   padding-top: 4.5rem;   /* ajusta según la altura real de la cabecera */
