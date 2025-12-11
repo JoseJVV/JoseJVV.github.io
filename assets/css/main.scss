@@ -627,7 +627,7 @@ img {
 .home-hero-gallery .home-hero-item:nth-child(2),
 .home-hero-gallery .home-hero-item:nth-child(3) {
   position: relative;
-  left:-20rem;/* AJUSTA este valor para más/menos desplazamiento */
+  left: -1rem;   /* mueve ambas hacia el centro */
 }
 
 /* === VERSIÓN MÓVIL DEFINITIVA === */
