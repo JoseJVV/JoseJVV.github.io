@@ -571,12 +571,12 @@ img {
 
   display: flex;
   justify-content: center;
-  gap: 0.1rem;       /* distancia entre las tres imágenes */
+  gap: 0.2rem;      /* distancia entre las tres imágenes */
   padding: 0 2rem;     /* margen interior a izquierda/derecha, como en la captura */
 }
 
 .home-hero-item {
-  flex: 0 1 29%;   /* ← ajusta aquí el tamaño real, recomendado 28–30% */
+  flex: 0 1 24%;   /* ← ajusta aquí el tamaño real, recomendado 28–30% */
 }
 
 .home-hero-item img {
