@@ -145,6 +145,7 @@ body {
 .page {
   padding-top: 4.5rem;   /* ajusta según la altura real de la cabecera */
 }
+
 ///////////////////////////////////////////////////////////////////////
 // ===== CAMBIO DE TAMAÑO DE TEXTO SOLO EN LA PÁGINA INICIO =========
 
@@ -551,4 +552,43 @@ img {
 }
 .project-thumb img {
   pointer-events: auto !important; /* permite el click SOLO en miniaturas */
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+/* === GALERÍA DE 3 IMÁGENES EN LA PÁGINA DE INICIO === */
+
+.home-hero-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 2.5rem;                 /* espacio entre las tres imágenes */
+  max-width: 1200px;           /* ancho máximo del conjunto */
+  margin: 3rem auto 3.5rem;    /* separación respecto al logo y al texto de "About me" */
+}
+
+.home-hero-item {
+  flex: 0 1 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-hero-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;            /* sin bordes redondeados, como en tu referencia */
+}
+
+/* En pantallas pequeñas (móvil), que no se rompa todo */
+@media (max-width: 900px) {
+  .home-hero-gallery {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .home-hero-item {
+    flex: 0 1 100%;
+  }
 }
