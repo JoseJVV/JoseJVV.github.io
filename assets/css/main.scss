@@ -619,9 +619,10 @@ img {
 
 /* Versión móvil: que no se rompa en pantallas pequeñas */
 @media (max-width: 1024px) {
-  .home-hero-gallery .home-hero-item:nth-child(1),
-  .home-hero-gallery .home-hero-item:nth-child(2),
-  .home-hero-gallery .home-hero-item:nth-child(3) {
+  
+  .home-hero-item--hero,
+  .home-hero-item--cd,
+  .home-hero-item--room {
     grid-column: 1;
     grid-row: auto;
     margin-top: 0;
