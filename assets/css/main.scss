@@ -591,7 +591,7 @@ img {
 .home-hero-gallery .home-hero-item:nth-child(1) {
   grid-column: 1/ span 3;   /* ocupa columnas 2 y 3 */
   grid-row: 2;
-  margin: top -1.5em;
+  margin-top:-1.5rem;
   margin-right:-6rem; 
   margin-bottom: -5rem;
 }
