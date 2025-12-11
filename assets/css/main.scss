@@ -576,9 +576,7 @@ img {
 }
 
 .home-hero-item {
-  flex: 0 1 33%;
-  display: flex;
-  justify-content: center;
+  flex: 0 1 29%;   /* ← ajusta aquí el tamaño real, recomendado 28–30% */
 }
 
 .home-hero-item img {
