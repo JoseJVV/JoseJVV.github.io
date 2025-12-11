@@ -583,10 +583,21 @@ img {
 
 .home-hero-item img {
   display: block;
-  width: 100%;
+  width: 90%;
   height: auto;
   object-fit: cover;
   border-radius: 0;
+}
+
+/* Bajar las imágenes izquierda y derecha */
+.home-hero-item:first-child img,
+.home-hero-item:last-child img {
+  margin-top: 2rem;   /* ← ajusta a tu gusto (1rem, 2rem, 3rem…) */
+}
+
+/* Mantener la imagen central sin bajar */
+.home-hero-item:nth-child(2) img {
+  margin-top: 0;
 }
 
 /* Versión móvil: que no se rompa en pantallas pequeñas */
