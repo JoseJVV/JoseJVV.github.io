@@ -81,7 +81,7 @@ I always look to collaborate with studios, developers, or clients who value crea
     </figure>
 
     <p class="project-description">
-      Animation to explain how a prototype machine works and what it is made of..
+      Animation to explain how a prototype machine works and what it is made of.
     </p>
   </article>
 
@@ -107,7 +107,7 @@ I always look to collaborate with studios, developers, or clients who value crea
     </figure>
 
     <p class="project-description">
-      Explanatory animation about the function of a STATCOM Power Plant and its process..
+      Explanatory animation about the function of a STATCOM Power Plant and its process.
     </p>
   </article>
 
