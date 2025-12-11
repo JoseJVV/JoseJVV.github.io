@@ -627,3 +627,8 @@ img {
     margin-top: 0;
   }
 }
+
+/* Eliminar scroll horizontal en toda la web */
+html, body {
+  overflow-x: hidden !important;
+}
