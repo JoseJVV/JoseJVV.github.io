@@ -123,12 +123,20 @@ body {
   background-color: #10121c;
 }
 
+
+/* === CABECERA / MENÚ FIJO === */
 /* Hacer que el header tenga el mismo color que el fondo */
 .masthead,
 .masthead__inner-wrap {
   background-color: #282d42;
-  box-shadow: none;
-  border-bottom: none;
+  /* box-shadow: none;
+  /* border-bottom: none;*/
+}
+/* Que la barra de menú se quede fija arriba al hacer scroll */
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 ///////////////////////////////////////////////////////////////////////
