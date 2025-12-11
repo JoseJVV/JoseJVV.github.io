@@ -136,8 +136,10 @@ body {
 
 /* Que la barra de menú se quede fija arriba al hacer scroll */
 .masthead {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 }
 
