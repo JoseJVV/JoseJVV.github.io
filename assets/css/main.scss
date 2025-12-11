@@ -559,7 +559,7 @@ img {
 /* === GALERÍA INICIAL DE 3 IMÁGENES (DISPOSICIÓN EN L) === */
 
 .home-hero-gallery {
-  /* ocupar todo el ancho como antes */
+  /* ancho a pantalla completa como ya teníamos */
   width: 100vw;
   max-width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -568,13 +568,14 @@ img {
   margin-top: 4rem;
   margin-bottom: 4rem;
 
-  /* colocación con GRID */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  /* tres columnas: izquierda, centro, derecha */
+  /* 👇 AQUÍ EL CAMBIO IMPORTANTE */
+  display: grid !important;   /* fuerza GRID en lugar de flex */
+  grid-template-columns: 1fr 1fr 1fr;  /* tres columnas */
   grid-auto-rows: auto;
   justify-items: center;
+  column-gap: 3rem;
+  row-gap: 0;
 }
-
 /* Todas las imágenes mismas reglas base */
 .home-hero-item img {
   display: block;
@@ -583,23 +584,24 @@ img {
   object-fit: cover;
 }
 
-/* Personaje + lobo: fila 1, columna 2 (centro-izquierda) */
-.home-hero-item--hero {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-/* CD: fila 1, columna 3 (derecha) */
-.home-hero-item--cd {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-/* Habitación: fila 2, columna 2 (debajo del personaje) */
-.home-hero-item--room {
+/* Posicionamiento de las 3 imágenes de portada usando el orden en el DOM */
+/* 1ª imagen (habitación 3D) -> fila 2, columna centro */
+.home-hero-gallery .home-hero-item:nth-child(1) {
   grid-column: 2;
   grid-row: 2;
   margin-top: 3rem;   /* separación vertical respecto a la fila de arriba */
+}
+
+/* 2ª imagen (personaje y lobo) -> fila 1, columna centro */
+.home-hero-gallery .home-hero-item:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* 3ª imagen (CD y portada) -> fila 1, columna derecha */
+.home-hero-gallery .home-hero-item:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
 }
 
 /* Opcional: desplazar un poco todo el bloque hacia la izquierda */
@@ -610,19 +612,9 @@ img {
 
 /* Versión móvil: que no se rompa en pantallas pequeñas */
 @media (max-width: 1024px) {
-  .home-hero-gallery {
-    position: static;
-    width: 100%;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: 1fr;
-    row-gap: 1.5rem;
-  }
-
-  .home-hero-item--hero,
-  .home-hero-item--cd,
-  .home-hero-item--room {
+  .home-hero-gallery .home-hero-item:nth-child(1),
+  .home-hero-gallery .home-hero-item:nth-child(2),
+  .home-hero-gallery .home-hero-item:nth-child(3) {
     grid-column: 1;
     grid-row: auto;
     margin-top: 0;
