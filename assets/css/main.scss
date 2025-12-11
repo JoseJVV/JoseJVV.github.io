@@ -638,17 +638,19 @@ img {
     margin: 2rem auto 3rem;
     padding: 0 1rem;
 
-    /* Nada de grid complicado en móvil: una columna sencilla */
-    display: block;
+    /* Sobrescribir el GRID de escritorio */
+    display: block !important;    /* 👈 importante el !important */
     position: static;
   }
 
   /* Cada figura una debajo de otra */
   .home-hero-gallery .home-hero-item {
-    margin: 0 0 2rem 0;   /* separación vertical entre imágenes */
+    display: block;
+    width: 100%;
+    margin: 0 0 2rem 0;           /* separación vertical entre imágenes */
   }
 
-  /* Anular posiciones especiales de escritorio (grid-column, margin-top, etc.) */
+  /* Anular posiciones especiales de escritorio */
   .home-hero-gallery .home-hero-item:nth-child(1),
   .home-hero-gallery .home-hero-item:nth-child(2),
   .home-hero-gallery .home-hero-item:nth-child(3) {
