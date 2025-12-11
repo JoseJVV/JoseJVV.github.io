@@ -575,25 +575,24 @@ img {
   padding: 0 2rem;     /* margen interior a izquierda/derecha, como en la captura */
 }
 
+/* Tamaño de cada miniatura de portada */
 .home-hero-item {
-  flex: 0 1 24%;   /* ← ajusta aquí el tamaño real, recomendado 28–30% */
+  flex: 0 1 29%;   /* ← AJUSTA AQUÍ EL TAMAÑO REAL */
+  display: flex;
+  justify-content: center;
 }
 
 .home-hero-item img {
-  display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 0;
 }
 
-/* Bajar las imágenes izquierda y derecha */
+/* Bajar laterales */
 .home-hero-item:first-child img,
 .home-hero-item:last-child img {
-  margin-top: 2rem;   /* ← ajusta a tu gusto (1rem, 2rem, 3rem…) */
+  margin-top: 2rem;
 }
 
-/* Mantener la imagen central sin bajar */
 .home-hero-item:nth-child(2) img {
   margin-top: 0;
 }
