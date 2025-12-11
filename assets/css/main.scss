@@ -630,47 +630,40 @@ img {
   left:-20rem;/* AJUSTA este valor para más/menos desplazamiento */
 }
 
-/* --- Versión móvil / tablet para la galería de inicio --- */
+/* === Versión móvil para la galería de inicio === */
 @media (max-width: 900px) {
   .home-hero-gallery {
     width: 100%;
     max-width: 100%;
-    
+    margin: 2rem auto 3rem;
     padding: 0 1rem;
 
-    /* 1 sola columna, imágenes en vertical */
-    display: grid !important;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    column-gap: 0;
-    row-gap: 1.5rem;
-
-    /* quitar cualquier desplazamiento lateral */
-    left: 0;
+    /* Nada de grid complicado en móvil: una columna sencilla */
+    display: block;
+    position: static;
   }
 
-  /* Cada figura ocupa la única columna */
+  /* Cada figura una debajo de otra */
   .home-hero-gallery .home-hero-item {
-    grid-column: 1;
-    grid-row: auto;
-    margin-top: 0;
+    margin: 0 0 2rem 0;   /* separación vertical entre imágenes */
   }
 
-  /* Quitar márgenes especiales de nth-child que usamos en escritorio */
+  /* Anular posiciones especiales de escritorio (grid-column, margin-top, etc.) */
   .home-hero-gallery .home-hero-item:nth-child(1),
   .home-hero-gallery .home-hero-item:nth-child(2),
   .home-hero-gallery .home-hero-item:nth-child(3) {
-    grid-column: 1;
+    grid-column: auto;
     grid-row: auto;
     margin-top: 0;
   }
 
-  /* Tamaño cómodo de la imagen en móvil */
+  /* Imágenes grandes, centradas y a ancho completo del contenedor */
   .home-hero-gallery .home-hero-item img {
+    display: block;
     width: 100%;
-    max-width: 480px;    /* ancho máximo para que no se vean gigantes */
+    max-width: 100%;
     height: auto;
-    margin: 0 auto;      /* centradas */
+    margin: 0 auto;
   }
 }
 
