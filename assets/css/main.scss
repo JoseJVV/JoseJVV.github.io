@@ -573,7 +573,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr;  /* tres columnas */
   grid-auto-rows: auto;
   justify-items: center;
-  column-gap: 3rem;
+  column-gap: 1rem;
   row-gap: 0;
 }
 /* Todas las imágenes mismas reglas base */
@@ -608,6 +608,13 @@ img {
 .home-hero-gallery {
   position: relative;
   left: -1.5rem;      /* ajusta si quieres más o menos desplazamiento */
+}
+
+/* Mover un poco hacia la izquierda las dos imágenes superiores */
+.home-hero-gallery .home-hero-item:nth-child(2),
+.home-hero-gallery .home-hero-item:nth-child(3) {
+  position: relative;
+  left: -1.2rem;   /* AJUSTA este valor para más/menos desplazamiento */
 }
 
 /* Versión móvil: que no se rompa en pantallas pequeñas */
