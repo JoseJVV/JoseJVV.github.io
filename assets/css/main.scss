@@ -571,9 +571,10 @@ img {
 
   display: flex;
   justify-content: center;
-  gap: 0.2rem;      /* distancia entre las tres imágenes */
+  gap: 0.4rem;      /* distancia entre las tres imágenes */
   padding: 0 2rem;     /* margen interior a izquierda/derecha, como en la captura */
 }
+
 
 /* Tamaño de cada miniatura de portada */
 .home-hero-item {
@@ -595,6 +596,12 @@ img {
 
 .home-hero-item:nth-child(2) img {
   margin-top: 0;
+}
+
+/* Mover toda la galería de 3 imágenes hacia la izquierda */
+.home-hero-gallery {
+  position: relative;
+  left: -1.5rem;   /* ← AJUSTA ESTE VALOR */
 }
 
 /* Versión móvil: que no se rompa en pantallas pequeñas */
