@@ -571,7 +571,7 @@ img {
 
   display: flex;
   justify-content: center;
-  gap: 0.5rem;        /* distancia entre las tres imágenes */
+  gap: 0.09rem;       /* distancia entre las tres imágenes */
   padding: 0 2rem;     /* margen interior a izquierda/derecha, como en la captura */
 }
 
@@ -607,7 +607,7 @@ img {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1.5rem;
+    padding: 0 0.8rem;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
