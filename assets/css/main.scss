@@ -138,7 +138,10 @@ body {
   top: 0;
   z-index: 1000;
 }
-
+/* Para que el contenido no quede escondido detrás del header fijo */
+.page {
+  padding-top: 4.5rem;   /* ajusta según la altura real de la cabecera */
+}
 ///////////////////////////////////////////////////////////////////////
 // ===== CAMBIO DE TAMAÑO DE TEXTO SOLO EN LA PÁGINA INICIO =========
 
