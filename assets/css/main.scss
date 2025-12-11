@@ -562,11 +562,11 @@ img {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 0.5;                 /* mayor espacio, como en tu referencia */
-  max-width: 2100px;      /* más ancho, imágenes grandes */
+  gap: 0.5rem;              /* mayor espacio, como en tu referencia */
+  max-width: 2300px;    /* más ancho, imágenes grandes */
   margin: 5rem auto 4rem;    /* más margen arriba */
 }
- 
+
 .home-hero-item {
   flex: 0 1 33%;
   display: flex;
