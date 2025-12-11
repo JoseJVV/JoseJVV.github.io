@@ -577,6 +577,7 @@ img {
   justify-items: center;
   column-gap: 1rem;
   row-gap: 0;
+  column-gap: 1rem;
 }
 /* Todas las imágenes mismas reglas base */
 .home-hero-item img {
@@ -627,7 +628,7 @@ img {
 .home-hero-gallery .home-hero-item:nth-child(2),
 .home-hero-gallery .home-hero-item:nth-child(3) {
   position: relative;
-  left: -1rem;   /* mueve ambas hacia el centro */
+  left:-20rem;/* AJUSTA este valor para más/menos desplazamiento */
 }
 
 /* === VERSIÓN MÓVIL DEFINITIVA === */
