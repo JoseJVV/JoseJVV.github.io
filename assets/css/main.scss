@@ -577,7 +577,7 @@ img {
   justify-items: center;
   column-gap: 1rem;
   row-gap: 0;
-  column-gap: 1rem;
+  
 }
 /* Todas las imágenes mismas reglas base */
 .home-hero-item img {
@@ -630,6 +630,15 @@ img {
   position: relative;
   left:-20rem;/* AJUSTA este valor para más/menos desplazamiento */
 }
+
+@media (min-width: 901px){
+  /* reduce internal margins between top images by increasing width */
+  .home-hero-gallery .home-hero-item:nth-child(2) img,
+  .home-hero-gallery .home-hero-item:nth-child(3) img {
+    max-width: 95%;
+  }
+}
+
 
 /* === VERSIÓN MÓVIL DEFINITIVA === */
 @media (max-width: 900px) {
