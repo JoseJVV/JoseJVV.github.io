@@ -46,41 +46,29 @@ Illustration · Concept Art · 3D Artist Junior.
            alt="Diseño gráfico de portada y CD">
     </button>
   </figure>
-
 </div>
 
-<!-- Modal (solo para estas 3 imágenes de Inicio) -->
-<div class="hh-modal" id="hhModal" aria-hidden="true">
-  <div class="hh-modal__backdrop" data-hh-close="1"></div>
 
-  <div class="hh-modal__panel" role="dialog" aria-modal="true" aria-label="Vista ampliada">
-    <button class="hh-modal__btn hh-modal__btn--close" type="button" aria-label="Cerrar" data-hh-close="1">×</button>
-    <button class="hh-modal__btn hh-modal__btn--fs" type="button" aria-label="Pantalla completa" id="hhFsBtn">⤢</button>
-    <img class="hh-modal__img" id="hhModalImg" alt="">
-  </div>
-</div>
 
+<!-- ====== MODAL (solo para estas 3 imágenes de Inicio) ====== -->
 <div class="mm-modal" id="mmModal" aria-hidden="true">
-  <div class="mm-modal__panel" role="dialog" aria-modal="true">
+  <div class="mm-modal__backdrop"></div>
 
-    <!-- ❌ BOTÓN CERRAR -->
-    <button class="mm-modal__close" type="button" aria-label="Cerrar imagen">
-      ×
-    </button>
-
-    <!-- IMAGEN -->
+  <div class="mm-modal__panel" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button class="mm-modal__close" type="button" aria-label="Cerrar imagen">×</button>
+    <button class="mm-modal__fs" type="button" aria-label="Pantalla completa" id="mmFsBtn">⤢</button>
     <img class="mm-modal__img" id="mmModalImg" alt="">
-
   </div>
 </div>
-
-
 
 <script>
 (() => {
   const modal = document.getElementById('mmModal');
   const modalImg = document.getElementById('mmModalImg');
-  const closeBtn = modal.querySelector('.mm-modal__close');
+  const closeBtn = modal?.querySelector('.mm-modal__close');
+  const fsBtn = document.getElementById('mmFsBtn');
+
+  if (!modal || !modalImg || !closeBtn) return;
 
   function openModal(src, alt) {
     modalImg.src = src;
@@ -95,27 +83,45 @@ Illustration · Concept Art · 3D Artist Junior.
     modal.setAttribute('aria-hidden', 'true');
     modalImg.src = '';
     document.documentElement.classList.remove('mm-lock');
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
   }
 
-  /* Abrir desde tus imágenes actuales */
+  // Abrir SOLO desde las 3 imágenes de Inicio (botón .home-hero-open)
   document.addEventListener('click', (e) => {
-    const img = e.target.closest('.home-hero-item img');
-    if (!img) return;
-    openModal(img.src, img.alt);
+    const btn = e.target.closest('.home-hero-open');
+    if (!btn) return;
+    e.preventDefault();
+
+    const src = btn.getAttribute('data-full') || btn.querySelector('img')?.getAttribute('src');
+    const alt = btn.getAttribute('data-alt') || btn.querySelector('img')?.getAttribute('alt') || '';
+    if (!src) return;
+
+    openModal(src, alt);
   });
 
-  /* ❌ Cerrar SOLO con la X */
+  // Cerrar SOLO con la X
   closeBtn.addEventListener('click', closeModal);
 
-  /* Desactivar click derecho SOLO en el modal */
-  modalImg.addEventListener('contextmenu', e => e.preventDefault());
+  // ESC también cierra
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  // Pantalla completa
+  fsBtn?.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      modal.requestFullscreen?.().catch(() => {});
+    } else {
+      document.exitFullscreen?.().catch(() => {});
+    }
+  });
+
+  // Desactivar click derecho SOLO en el modal
+  modalImg.addEventListener('contextmenu', (e) => e.preventDefault());
 })();
 </script>
-
-
-
-
-
 
 
 ## About me
