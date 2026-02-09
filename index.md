@@ -111,6 +111,19 @@ Illustration · Concept Art · 3D Artist Junior.
 })();
 </script>
 
+<div class="mm-modal" id="mmModal" aria-hidden="true">
+  <div class="mm-modal__panel" role="dialog" aria-modal="true">
+
+    <!-- ❌ BOTÓN CERRAR -->
+    <button class="mm-modal__close" type="button" aria-label="Cerrar imagen">
+      ×
+    </button>
+
+    <!-- IMAGEN -->
+    <img class="mm-modal__img" id="mmModalImg" alt="">
+
+  </div>
+</div>
 
 
 

@@ -696,9 +696,7 @@ html, body {
    No afecta a otras galerías/proyectos.
    ========================================================= */
 
-.home-hero-gallery {
-  /* Mantén tu layout existente: NO tocamos display/grid aquí */
-}
+/* Mantén tu layout existente: NO tocamos display/grid aquí */
 
 .home-hero-gallery .home-hero-open {
   display: block;
@@ -786,4 +784,53 @@ html.hh-lock {
 @media (max-width: 900px) {
   .hh-modal__panel { padding: 1rem; }
   .hh-modal__img { max-width: 94vw; max-height: 86vh; }
+}
+/* ===== MODAL IMÁGENES ===== */
+.mm-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  display: none;
+}
+
+.mm-modal.is-open {
+  display: grid;
+  place-items: center;
+}
+
+.mm-modal__panel {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.mm-modal__img {
+  max-width: 100%;
+  max-height: 90vh;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ❌ BOTÓN CERRAR */
+.mm-modal__close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 22px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.mm-modal__close:hover {
+  background: rgba(255,255,255,0.1);
 }
