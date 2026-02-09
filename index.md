@@ -21,21 +21,96 @@ Illustration · Concept Art · 3D Artist Junior.
 <div class="home-hero-gallery">
 
   <figure class="home-hero-item">
-    <img src="/PROYECTOS/INICIO/3D_1.png"
-         alt="Habitación 3D y props para entorno interior">
+    <button class="home-hero-open" type="button"
+      data-full="/PROYECTOS/INICIO/3D_1.png"
+      data-alt="Habitación 3D y props para entorno interior">
+      <img src="/PROYECTOS/INICIO/3D_1.png"
+           alt="Habitación 3D y props para entorno interior">
+    </button>
   </figure>
 
   <figure class="home-hero-item">
-    <img src="/PROYECTOS/INICIO/IlustracionAnime.png"
-         alt="Ilustración de personaje con lobo de energía">
-  </figure>  
+    <button class="home-hero-open" type="button"
+      data-full="/PROYECTOS/INICIO/IlustracionAnime.png"
+      data-alt="Ilustración de personaje con lobo de energía">
+      <img src="/PROYECTOS/INICIO/IlustracionAnime.png"
+           alt="Ilustración de personaje con lobo de energía">
+    </button>
+  </figure>
 
   <figure class="home-hero-item">
-    <img src="/PROYECTOS/INICIO/ilustracionCD.png"
-         alt="Diseño gráfico de portada y CD">
-  </figure>  
+    <button class="home-hero-open" type="button"
+      data-full="/PROYECTOS/INICIO/ilustracionCD.png"
+      data-alt="Diseño gráfico de portada y CD">
+      <img src="/PROYECTOS/INICIO/ilustracionCD.png"
+           alt="Diseño gráfico de portada y CD">
+    </button>
+  </figure>
 
 </div>
+
+<!-- Modal (solo para estas 3 imágenes de Inicio) -->
+<div class="hh-modal" id="hhModal" aria-hidden="true">
+  <div class="hh-modal__backdrop" data-hh-close="1"></div>
+
+  <div class="hh-modal__panel" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button class="hh-modal__btn hh-modal__btn--close" type="button" aria-label="Cerrar" data-hh-close="1">×</button>
+    <button class="hh-modal__btn hh-modal__btn--fs" type="button" aria-label="Pantalla completa" id="hhFsBtn">⤢</button>
+    <img class="hh-modal__img" id="hhModalImg" alt="">
+  </div>
+</div>
+
+<script>
+(() => {
+  const modal = document.getElementById('hhModal');
+  const modalImg = document.getElementById('hhModalImg');
+  const fsBtn = document.getElementById('hhFsBtn');
+
+  const openModal = (src, alt) => {
+    modalImg.src = src;
+    modalImg.alt = alt || '';
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.documentElement.classList.add('hh-lock');
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('hh-lock');
+    modalImg.src = '';
+  };
+
+  // Abrir SOLO desde .home-hero-gallery
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.home-hero-gallery .home-hero-open');
+    if (btn) {
+      const src = btn.getAttribute('data-full') || btn.querySelector('img')?.src;
+      const alt = btn.getAttribute('data-alt') || btn.querySelector('img')?.alt || '';
+      openModal(src, alt);
+      return;
+    }
+
+    // Cerrar: fondo o X
+    if (e.target.closest('[data-hh-close="1"]')) closeModal();
+  });
+
+  // ESC para cerrar
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  // Pantalla completa
+  fsBtn?.addEventListener('click', () => {
+    if (!document.fullscreenElement) modal.requestFullscreen?.();
+    else document.exitFullscreen?.();
+  });
+
+  // Desactivar click derecho SOLO en el modal (no afecta a otras galerías/lightbox)
+  modalImg.addEventListener('contextmenu', (e) => e.preventDefault());
+})();
+</script>
+
 
 
 
