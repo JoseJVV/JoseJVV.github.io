@@ -50,6 +50,16 @@ Illustration · Concept Art · 3D Artist Junior.
 </div>
 
 <!-- Modal (solo para estas 3 imágenes de Inicio) -->
+<div class="hh-modal" id="hhModal" aria-hidden="true">
+  <div class="hh-modal__backdrop" data-hh-close="1"></div>
+
+  <div class="hh-modal__panel" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button class="hh-modal__btn hh-modal__btn--close" type="button" aria-label="Cerrar" data-hh-close="1">×</button>
+    <button class="hh-modal__btn hh-modal__btn--fs" type="button" aria-label="Pantalla completa" id="hhFsBtn">⤢</button>
+    <img class="hh-modal__img" id="hhModalImg" alt="">
+  </div>
+</div>
+
 <div class="mm-modal" id="mmModal" aria-hidden="true">
   <div class="mm-modal__panel" role="dialog" aria-modal="true">
 
@@ -63,6 +73,8 @@ Illustration · Concept Art · 3D Artist Junior.
 
   </div>
 </div>
+
+
 
 <script>
 (() => {
