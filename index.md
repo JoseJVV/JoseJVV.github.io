@@ -21,107 +21,23 @@ Illustration · Concept Art · 3D Artist Junior.
 <div class="home-hero-gallery">
 
   <figure class="home-hero-item">
-    <button class="home-hero-open" type="button"
-      data-full="/PROYECTOS/INICIO/3D_1.png"
-      data-alt="Habitación 3D y props para entorno interior">
-      <img src="/PROYECTOS/INICIO/3D_1.png"
-           alt="Habitación 3D y props para entorno interior">
-    </button>
+    <img src="/PROYECTOS/INICIO/3D_1.png"
+         alt="Habitación 3D y props para entorno interior">
   </figure>
 
   <figure class="home-hero-item">
-    <button class="home-hero-open" type="button"
-      data-full="/PROYECTOS/INICIO/IlustracionAnime.png"
-      data-alt="Ilustración de personaje con lobo de energía">
-      <img src="/PROYECTOS/INICIO/IlustracionAnime.png"
-           alt="Ilustración de personaje con lobo de energía">
-    </button>
-  </figure>
+    <img src="/PROYECTOS/INICIO/IlustracionAnime.png"
+         alt="Ilustración de personaje con lobo de energía">
+  </figure>  
 
   <figure class="home-hero-item">
-    <button class="home-hero-open" type="button"
-      data-full="/PROYECTOS/INICIO/ilustracionCD.png"
-      data-alt="Diseño gráfico de portada y CD">
-      <img src="/PROYECTOS/INICIO/ilustracionCD.png"
-           alt="Diseño gráfico de portada y CD">
-    </button>
-  </figure>
+    <img src="/PROYECTOS/INICIO/ilustracionCD.png"
+         alt="Diseño gráfico de portada y CD">
+  </figure>  
+
 </div>
 
 
-
-<!-- ====== MODAL (solo para estas 3 imágenes de Inicio) ====== -->
-<div class="mm-modal" id="mmModal" aria-hidden="true">
-  <div class="mm-modal__backdrop"></div>
-
-  <div class="mm-modal__panel" role="dialog" aria-modal="true" aria-label="Vista ampliada">
-    <button class="mm-modal__close" type="button" aria-label="Cerrar imagen">×</button>
-    <button class="mm-modal__fs" type="button" aria-label="Pantalla completa" id="mmFsBtn">⤢</button>
-    <img class="mm-modal__img" id="mmModalImg" alt="">
-  </div>
-</div>
-
-<script>
-(() => {
-  const modal = document.getElementById('mmModal');
-  const modalImg = document.getElementById('mmModalImg');
-  const closeBtn = modal?.querySelector('.mm-modal__close');
-  const fsBtn = document.getElementById('mmFsBtn');
-
-  if (!modal || !modalImg || !closeBtn) return;
-
-  function openModal(src, alt) {
-    modalImg.src = src;
-    modalImg.alt = alt || '';
-    modal.classList.add('is-open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.documentElement.classList.add('mm-lock');
-  }
-
-  function closeModal() {
-    modal.classList.remove('is-open');
-    modal.setAttribute('aria-hidden', 'true');
-    modalImg.src = '';
-    document.documentElement.classList.remove('mm-lock');
-    if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {});
-    }
-  }
-
-  // Abrir SOLO desde las 3 imágenes de Inicio (botón .home-hero-open)
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.home-hero-open');
-    if (!btn) return;
-    e.preventDefault();
-
-    const src = btn.getAttribute('data-full') || btn.querySelector('img')?.getAttribute('src');
-    const alt = btn.getAttribute('data-alt') || btn.querySelector('img')?.getAttribute('alt') || '';
-    if (!src) return;
-
-    openModal(src, alt);
-  });
-
-  // Cerrar SOLO con la X
-  closeBtn.addEventListener('click', closeModal);
-
-  // ESC también cierra
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-  });
-
-  // Pantalla completa
-  fsBtn?.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-      modal.requestFullscreen?.().catch(() => {});
-    } else {
-      document.exitFullscreen?.().catch(() => {});
-    }
-  });
-
-  // Desactivar click derecho SOLO en el modal
-  modalImg.addEventListener('contextmenu', (e) => e.preventDefault());
-})();
-</script>
 
 
 ## About me
