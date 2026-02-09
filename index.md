@@ -78,54 +78,40 @@ Illustration · Concept Art · 3D Artist Junior.
 
 <script>
 (() => {
-  const modal = document.getElementById('hhModal');
-  const modalImg = document.getElementById('hhModalImg');
-  const fsBtn = document.getElementById('hhFsBtn');
+  const modal = document.getElementById('mmModal');
+  const modalImg = document.getElementById('mmModalImg');
+  const closeBtn = modal.querySelector('.mm-modal__close');
 
-  const openModal = (src, alt) => {
+  function openModal(src, alt) {
     modalImg.src = src;
     modalImg.alt = alt || '';
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
-    document.documentElement.classList.add('hh-lock');
-  };
+    document.documentElement.classList.add('mm-lock');
+  }
 
-  const closeModal = () => {
+  function closeModal() {
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
-    document.documentElement.classList.remove('hh-lock');
     modalImg.src = '';
-  };
+    document.documentElement.classList.remove('mm-lock');
+  }
 
-  // Abrir SOLO desde .home-hero-gallery
+  /* Abrir desde tus imágenes actuales */
   document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.home-hero-gallery .home-hero-open');
-    if (btn) {
-      const src = btn.getAttribute('data-full') || btn.querySelector('img')?.src;
-      const alt = btn.getAttribute('data-alt') || btn.querySelector('img')?.alt || '';
-      openModal(src, alt);
-      return;
-    }
-
-    // Cerrar: fondo o X
-    if (e.target.closest('[data-hh-close="1"]')) closeModal();
+    const img = e.target.closest('.home-hero-item img');
+    if (!img) return;
+    openModal(img.src, img.alt);
   });
 
-  // ESC para cerrar
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-  });
+  /* ❌ Cerrar SOLO con la X */
+  closeBtn.addEventListener('click', closeModal);
 
-  // Pantalla completa
-  fsBtn?.addEventListener('click', () => {
-    if (!document.fullscreenElement) modal.requestFullscreen?.();
-    else document.exitFullscreen?.();
-  });
-
-  // Desactivar click derecho SOLO en el modal (no afecta a otras galerías/lightbox)
-  modalImg.addEventListener('contextmenu', (e) => e.preventDefault());
+  /* Desactivar click derecho SOLO en el modal */
+  modalImg.addEventListener('contextmenu', e => e.preventDefault());
 })();
 </script>
+
 
 
 
