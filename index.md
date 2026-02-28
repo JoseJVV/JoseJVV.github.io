@@ -13,7 +13,7 @@ excerpt: "Ilustración, Concept Art y Modelado 3D con estética de fantasía osc
     oncontextmenu="return false;" >
 
 <p class="hero__subtitle">
-Illustration · Concept Art · 3D Artist Junior.
+Illustration · Concept Artist · 3D Artist Junior.
 </p>
 </div>
 
